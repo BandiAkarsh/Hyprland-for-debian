@@ -20,7 +20,7 @@ jobs:
             libinput-dev libdrm-dev libgbm-dev libcairo2-dev libpango1.0-dev \
             libpixman-1-dev libxcursor-dev libxcb*-dev libgl1-mesa-dev \
             libgles2-mesa-dev libegl1-mesa-dev uuid-dev liblcms2-dev \
-            libre2-dev libmuparser-dev liblua5.4-dev libmagic-dev librsvg2-dev git curl ca-certificates \
+            libre2-dev libmuparser-dev liblua5.4-dev libmagic-dev librsvg2-dev libpugixml-dev git curl ca-certificates \
             wget libjxl-dev libheif-dev libzip-dev libtomlplusplus-dev
 
       - name: Build ecosystem libraries
