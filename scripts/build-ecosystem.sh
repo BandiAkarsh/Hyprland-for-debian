@@ -48,16 +48,10 @@ for entry in "${LIBS[@]}"; do
     sed -i '1i#include <fstream>' hyprcursor-util/src/main.cpp
   fi
 
-  # Linux fix: create dummy epoll-shim.pc (only needed on BSD)
+  # GCC 14 + hyprwayland-scanner 0.4 generates zero-length vtable arrays
+  # which -Wpedantic treats as error. Add override flag after -Wpedantic.
   if [ "$name" = "aquamarine" ]; then
-    mkdir -p /usr/lib/pkgconfig
-    cat > /usr/lib/pkgconfig/epoll-shim.pc << 'EOF'
-Name: epoll-shim
-Description: epoll on Linux (stub)
-Version: 1.0
-Libs: 
-Cflags: 
-EOF
+    sed -i '/-Wpedantic/a\  -Wno-zero-length-array' CMakeLists.txt
   fi
 
   cmake -B build -DCMAKE_BUILD_TYPE=Release \
