@@ -80,6 +80,41 @@ print('Patched hyprwayland-scanner vtable codegen to avoid zero-length arrays')
 "
   fi
 
+  # GCC 14.2 in Debian trixie lacks std::vector::append_range (C++23).
+  # Replace with equivalent insert(end(), ...) calls.
+  if [ "$name" = "hyprwire" ]; then
+    python3 << 'PYEOF'
+patches = {
+    'src/core/message/messages/BindProtocol.cpp': [
+        ('''    m_data.append_range(g_messageParser->encodeVarInt(protocol.length()));
+    m_data.append_range(protocol);
+
+    m_data.append_range(std::vector<uint8_t>{HW_MESSAGE_MAGIC_TYPE_UINT, 0, 0, 0, 0});''',
+         '''    { auto _r = g_messageParser->encodeVarInt(protocol.length()); m_data.insert(m_data.end(), _r.begin(), _r.end()); }
+    m_data.insert(m_data.end(), protocol.begin(), protocol.end());
+
+    { auto _r = std::vector<uint8_t>{HW_MESSAGE_MAGIC_TYPE_UINT, 0, 0, 0, 0}; m_data.insert(m_data.end(), _r.begin(), _r.end()); }'''),
+    ],
+    'src/core/message/messages/FatalProtocolError.cpp': [
+        ('''    m_data.append_range(g_messageParser->encodeVarInt(msg.size()));
+    m_data.append_range(msg);''',
+         '''    { auto _r = g_messageParser->encodeVarInt(msg.size()); m_data.insert(m_data.end(), _r.begin(), _r.end()); }
+    m_data.insert(m_data.end(), msg.begin(), msg.end());'''),
+    ],
+}
+
+for fpath, replacements in patches.items():
+    with open(fpath) as f:
+        content = f.read()
+    for old, new in replacements:
+        assert old in content, f'Pattern not found in {fpath}'
+        content = content.replace(old, new)
+    with open(fpath, 'w') as f:
+        f.write(content)
+    print(f'Patched {fpath}')
+PYEOF
+  fi
+
   cmake -B build -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_POSITION_INDEPENDENT_CODE=ON
