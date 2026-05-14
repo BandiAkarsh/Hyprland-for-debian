@@ -48,10 +48,35 @@ for entry in "${LIBS[@]}"; do
     sed -i '1i#include <fstream>' hyprcursor-util/src/main.cpp
   fi
 
-  # GCC 14 + hyprwayland-scanner 0.4 generates zero-length vtable arrays
-  # which -Wpedantic treats as error. Add override flag after -Wpedantic.
-  if [ "$name" = "aquamarine" ]; then
-    sed -i 's/-Wpedantic)/-Wpedantic\n  -Wno-zero-length-array)/' CMakeLists.txt
+  # GCC 14 fix: hyprwayland-scanner 0.4 codegen emits zero-length vtable arrays
+  # for interfaces with no requests/events, which -Wpedantic rejects.
+  # Patch the codegen to always emit at least `nullptr`.
+  if [ "$name" = "hyprwayland-scanner" ]; then
+    python3 -c "
+import re
+with open('src/main.cpp') as f:
+    content = f.read()
+old = '''        for (auto& rq : (clientCode ? iface.events : iface.requests)) {
+            const auto REQUEST_NAME = camelize(std::string{\"_\"} + \"C_\" + IFACE_NAME + \"_\" + rq.name);
+            SOURCE += std::format(\"    (void*){},\\\n\", REQUEST_NAME);
+        }'''
+new = '''        {
+            const auto& items_rq = (clientCode ? iface.events : iface.requests);
+            if (items_rq.empty()) {
+                SOURCE += \"    nullptr,\\\n\";
+            } else {
+                for (auto& rq : items_rq) {
+                    const auto REQUEST_NAME = camelize(std::string{\"_\"} + \"C_\" + IFACE_NAME + \"_\" + rq.name);
+                    SOURCE += std::format(\"    (void*){},\\\n\", REQUEST_NAME);
+                }
+            }
+        }'''
+assert content.count(old) == 1, 'unexpected number of vtable loop matches'
+content = content.replace(old, new)
+with open('src/main.cpp', 'w') as f:
+    f.write(content)
+print('Patched hyprwayland-scanner vtable codegen to avoid zero-length arrays')
+"
   fi
 
   cmake -B build -DCMAKE_BUILD_TYPE=Release \
