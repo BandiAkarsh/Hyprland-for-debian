@@ -81,36 +81,48 @@ print('Patched hyprwayland-scanner vtable codegen to avoid zero-length arrays')
   fi
 
   # GCC 14.2 in Debian trixie lacks std::vector::append_range (C++23).
-  # Replace with equivalent insert(end(), ...) calls.
+  # Patch all source files: vec.append_range(expr) → for (auto&& _c : expr) vec.push_back(_c)
   if [ "$name" = "hyprwire" ]; then
     python3 << 'PYEOF'
-patches = {
-    'src/core/message/messages/BindProtocol.cpp': [
-        ('''    m_data.append_range(g_messageParser->encodeVarInt(protocol.length()));
-    m_data.append_range(protocol);
+import glob
 
-    m_data.append_range(std::vector<uint8_t>{HW_MESSAGE_MAGIC_TYPE_UINT, 0, 0, 0, 0});''',
-         '''    { auto _r = g_messageParser->encodeVarInt(protocol.length()); m_data.insert(m_data.end(), _r.begin(), _r.end()); }
-    m_data.insert(m_data.end(), protocol.begin(), protocol.end());
+def fix_append_range(text):
+    """Replace vec.append_range(expr) with for-loop push_back, handling nested parens."""
+    result = []
+    i = 0
+    while i < len(text):
+        idx = text.find('.append_range(', i)
+        if idx == -1:
+            result.append(text[i:])
+            break
+        result.append(text[i:idx])
+        # Find the variable name (word before '.append_range')
+        start = idx - 1
+        while start >= 0 and (text[start].isalnum() or text[start] == '_'):
+            start -= 1
+        var = text[start+1:idx]
+        # Find matching close paren (handling nesting)
+        depth = 1
+        j = idx + len('.append_range(')
+        while j < len(text) and depth > 0:
+            if text[j] == '(':
+                depth += 1
+            elif text[j] == ')':
+                depth -= 1
+            j += 1
+        expr = text[idx + len('.append_range('):j-1]
+        result.append(f'for (auto&& _c : {expr}) {var}.push_back(_c)')
+        i = j
+    return ''.join(result)
 
-    { auto _r = std::vector<uint8_t>{HW_MESSAGE_MAGIC_TYPE_UINT, 0, 0, 0, 0}; m_data.insert(m_data.end(), _r.begin(), _r.end()); }'''),
-    ],
-    'src/core/message/messages/FatalProtocolError.cpp': [
-        ('''    m_data.append_range(g_messageParser->encodeVarInt(msg.size()));
-    m_data.append_range(msg);''',
-         '''    { auto _r = g_messageParser->encodeVarInt(msg.size()); m_data.insert(m_data.end(), _r.begin(), _r.end()); }
-    m_data.insert(m_data.end(), msg.begin(), msg.end());'''),
-    ],
-}
-
-for fpath, replacements in patches.items():
+for fpath in glob.glob('src/**/*.cpp', recursive=True):
     with open(fpath) as f:
         content = f.read()
-    for old, new in replacements:
-        assert old in content, f'Pattern not found in {fpath}'
-        content = content.replace(old, new)
+    if '.append_range(' not in content:
+        continue
+    new_content = fix_append_range(content)
     with open(fpath, 'w') as f:
-        f.write(content)
+        f.write(new_content)
     print(f'Patched {fpath}')
 PYEOF
   fi
