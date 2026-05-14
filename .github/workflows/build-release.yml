@@ -1,0 +1,103 @@
+name: Build and Release .deb
+on:
+  push:
+    branches: [debian-stable]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install system dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y cmake g++ pkg-config wayland-protocols \
+            glslang-dev glslang-tools libwayland-dev libxkbcommon-dev \
+            libinput-dev libdrm-dev libgbm-dev libcairo2-dev libpango1.0-dev \
+            libpixman-1-dev libxcursor-dev libxcb*-dev libgl1-mesa-dev \
+            libgles2-mesa-dev libegl1-mesa-dev libuuid-dev liblcms2-dev \
+            libre2-dev libmuparser-dev liblua5.4-dev
+
+      - name: Build ecosystem libraries
+        run: |
+          chmod +x scripts/build-ecosystem.sh
+          sudo scripts/build-ecosystem.sh
+
+      - name: Build Hyprland
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DNO_XWAYLAND=OFF
+          cmake --build build -j$(nproc)
+
+      - name: Package as .deb
+        run: |
+          mkdir -p package/DEBIAN package/usr
+          DESTDIR=$PWD/package cmake --install build
+
+          VERSION=$(cat VERSION)
+          GIT_HASH=$(git rev-parse --short HEAD)
+
+          cat > package/DEBIAN/control << EOF
+          Package: hyprland
+          Version: ${VERSION}-git${GIT_HASH}
+          Section: x11
+          Priority: optional
+          Architecture: amd64
+          Maintainer: BandiAkarsh <hyprland-fork>
+          Depends: libc6, libwayland-client0, libwayland-server0, libxkbcommon0,
+           libinput10, libdrm2, libgbm1, libcairo2, libpango-1.0-0,
+           libpangocairo-1.0-0, libpixman-1-0, libxcursor1, liblua5.4-0,
+           libgl1-mesa-glx, libegl1-mesa, libuuid1, liblcms2-2, libre2-9,
+           libmuparser2t64, glslang-tools
+          Description: Hyprland Wayland compositor (Debian stable fork)
+           A dynamic tiling Wayland compositor with eye candy.
+           Fork adapted for Debian stable / LMDE.
+          EOF
+
+          cat > package/DEBIAN/postinst << 'POSTINST'
+          #!/bin/sh
+          set -e
+          echo "Hyprland installed. Start with: Hyprland"
+          echo "Or add to your display manager session."
+          exit 0
+          POSTINST
+          chmod +x package/DEBIAN/postinst
+
+          dpkg-deb --build package
+          mv package.deb hyprland-debian-stable.deb
+
+      - name: Upload .deb as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hyprland-debian-stable
+          path: hyprland-debian-stable.deb
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/heads/debian-stable') || github.event_name == 'workflow_dispatch'
+        with:
+          tag_name: debian-stable-$(date +%Y%m%d)
+          name: Hyprland for Debian stable ($(date +%Y-%m-%d))
+          body: |
+            ## Hyprland v$(cat VERSION) for Debian 13 / LMDE 7
+
+            Auto-built from upstream Hyprland + Debian compatibility patches.
+
+            ### Install
+            ```bash
+            sudo dpkg -i hyprland-debian-stable.deb
+            sudo apt install -f
+            ```
+
+            ### What's included
+            - Full Hyprland v$(cat VERSION) with all features
+            - Lua config support
+            - Bundled ecosystem libraries
+            - Wayland protocol compatibility for Debian 13
+          files: hyprland-debian-stable.deb
+          make_latest: true

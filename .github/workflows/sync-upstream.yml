@@ -39,6 +39,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git push origin debian-stable
 
+      - name: Trigger build-and-release
+        if: success() && hashFiles('conflict.txt') == ''
+        run: |
+          gh workflow run build-release.yml --ref debian-stable
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Notify on conflict
         if: hashFiles('conflict.txt') != ''
         run: |
