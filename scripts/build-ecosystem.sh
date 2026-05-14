@@ -40,6 +40,12 @@ for entry in "${LIBS[@]}"; do
     git clone --depth 1 "$url" "$name"
 
   cd "$name"
+
+  # GCC 14 fix: hyprcursor v0.1.9 needs explicit #include <fstream>
+  if [ "$name" = "hyprcursor" ]; then
+    sed -i '1i#include <fstream>' hyprcursor-util/src/main.cpp
+  fi
+
   cmake -B build -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_POSITION_INDEPENDENT_CODE=ON
