@@ -6,7 +6,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
+    container:
+      image: debian:trixie-slim
     steps:
       - uses: actions/checkout@v4
         with:
@@ -14,18 +16,19 @@ jobs:
 
       - name: Install system dependencies
         run: |
-          sudo apt update
-          sudo apt install -y cmake g++ pkg-config wayland-protocols \
+          apt update
+          apt install -y cmake g++ pkg-config wayland-protocols \
             glslang-dev glslang-tools libwayland-dev libxkbcommon-dev \
             libinput-dev libdrm-dev libgbm-dev libcairo2-dev libpango1.0-dev \
             libpixman-1-dev libxcursor-dev libxcb*-dev libgl1-mesa-dev \
             libgles2-mesa-dev libegl1-mesa-dev libuuid-dev liblcms2-dev \
-            libre2-dev libmuparser-dev liblua5.4-dev
+            libre2-dev libmuparser-dev liblua5.4-dev git curl ca-certificates \
+            wget
 
       - name: Build ecosystem libraries
         run: |
           chmod +x scripts/build-ecosystem.sh
-          sudo scripts/build-ecosystem.sh
+          bash scripts/build-ecosystem.sh
 
       - name: Build Hyprland
         run: |
@@ -79,7 +82,7 @@ jobs:
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/heads/debian-stable') || github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/debian-stable'
         with:
           tag_name: debian-stable-$(date +%Y%m%d)
           name: Hyprland for Debian stable ($(date +%Y-%m-%d))
@@ -94,6 +97,11 @@ jobs:
             sudo apt install -f
             ```
 
+            ### One-liner
+            ```bash
+            curl -sL https://raw.githubusercontent.com/BandiAkarsh/Hyprland-for-debian/debian-stable/install.sh | bash
+            ```
+
             ### What's included
             - Full Hyprland v$(cat VERSION) with all features
             - Lua config support
@@ -101,3 +109,4 @@ jobs:
             - Wayland protocol compatibility for Debian 13
           files: hyprland-debian-stable.deb
           make_latest: true
+          generate_release_notes: false
