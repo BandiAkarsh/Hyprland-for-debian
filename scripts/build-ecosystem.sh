@@ -14,7 +14,7 @@ apt install -y cmake g++ pkg-config libwayland-dev wayland-protocols \
   glslang-dev glslang-tools uuid-dev liblcms2-dev libre2-dev \
   libmuparser-dev liblua5.4-dev libmagic-dev librsvg2-dev libpugixml-dev \
   libseat-dev libdisplay-info-dev libjxl-dev libheif-dev libzip-dev libtomlplusplus-dev \
-  hwdata libglvnd-dev
+  hwdata libglvnd-dev libffi-dev
 
 LIBS=(
   "hyprutils,v0.13.1,https://github.com/hyprwm/hyprutils"
@@ -22,6 +22,7 @@ LIBS=(
   "hyprlang,v0.6.7,https://github.com/hyprwm/hyprlang"
   "hyprwayland-scanner,v0.4.1,https://github.com/hyprwm/hyprwayland-scanner"
   "hyprcursor,v0.1.9,https://github.com/hyprwm/hyprcursor"
+  "hyprwire,v0.3.1,https://github.com/hyprwm/hyprwire"
   "aquamarine,v0.10.0,https://github.com/hyprwm/aquamarine"
 )
 
