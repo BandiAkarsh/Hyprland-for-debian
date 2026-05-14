@@ -48,6 +48,18 @@ for entry in "${LIBS[@]}"; do
     sed -i '1i#include <fstream>' hyprcursor-util/src/main.cpp
   fi
 
+  # Linux fix: create dummy epoll-shim.pc (only needed on BSD)
+  if [ "$name" = "aquamarine" ]; then
+    mkdir -p /usr/lib/pkgconfig
+    cat > /usr/lib/pkgconfig/epoll-shim.pc << 'EOF'
+Name: epoll-shim
+Description: epoll on Linux (stub)
+Version: 1.0
+Libs: 
+Cflags: 
+EOF
+  fi
+
   cmake -B build -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_POSITION_INDEPENDENT_CODE=ON
