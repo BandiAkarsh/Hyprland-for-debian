@@ -45,10 +45,12 @@ if(NOT udis_dep_FOUND)
   find_library(udis_nopc udis86)
   if(NOT("${udis_nopc}" MATCHES "udis_nopc-NOTFOUND"))
     message(STATUS "Found udis86 at ${udis_nopc}")
-  else()
+  elseif(EXISTS "${CMAKE_SOURCE_DIR}/subprojects/udis86/CMakeLists.txt")
     add_subdirectory("subprojects/udis86")
     include_directories("subprojects/udis86")
     message(STATUS "udis86 dependency not found, falling back to subproject")
+  else()
+    message(FATAL_ERROR "udis86 not found via pkg-config or find_library, and subprojects/udis86 is missing. Run: git submodule update --init")
   endif()
 endif()
 
@@ -247,7 +249,7 @@ configure_file(
 
 set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
 
-set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
+set(XKBCOMMON_MINIMUM_VERSION 1.7.0)
 set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.91)
 set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.44)
 set(LIBINPUT_MINIMUM_VERSION 1.28)
