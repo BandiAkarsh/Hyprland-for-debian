@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: debian:trixie-slim
+      image: debian:trixie
     steps:
       - uses: actions/checkout@v4
         with:

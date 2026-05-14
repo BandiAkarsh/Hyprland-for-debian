@@ -2,6 +2,7 @@
 # Build Hyprland ecosystem libraries from source for Debian stable
 # Run this ONCE before building Hyprland
 # Usage: sudo bash scripts/build-ecosystem.sh
+# (runs without sudo inside Docker containers)
 
 set -e
 
