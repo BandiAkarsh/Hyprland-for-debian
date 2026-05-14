@@ -1,0 +1,222 @@
+{
+  "description": "Semantic node/edge proposals for Hyprland knowledge graph, identified during architectural review on 2026-05-13. These capture design patterns, cross-cutting concerns, and architectural relationships that an AST-only extraction would miss.",
+  "proposed_nodes": [
+    {
+      "id": "singleton_pattern",
+      "label": "Singleton via Global Inline Pointers",
+      "file_type": "rationale",
+      "source_file": "src/Compositor.hpp",
+      "source_location": null,
+      "rationale": "The implicit singleton pattern used by 21+ managers (g_pCompositor, g_pPluginSystem, etc.) is a key architectural invariant not captured as a named node."
+    },
+    {
+      "id": "signal_slot_system",
+      "label": "Signal/Slot Observer System",
+      "file_type": "rationale",
+      "source_file": "src/helpers/signal/Signal.hpp",
+      "source_location": null,
+      "rationale": "CHyprSignalListener-based observer pattern used pervasively for event propagation (window lifecycle, focus, config reloads). Not captured as a semantic concept in the graph."
+    },
+    {
+      "id": "lua_bridge",
+      "label": "Lua-C++ Bridge Layer",
+      "file_type": "rationale",
+      "source_file": "src/config/lua/LuaEventHandler.hpp",
+      "source_location": null,
+      "rationale": "The metatable-based C++-to-Lua translation layer (userdata, registry refs, signal-to-callback translation) is a significant architectural component."
+    },
+    {
+      "id": "error_propagation",
+      "label": "std::expected Error Propagation",
+      "file_type": "rationale",
+      "source_file": "src/config/shared/ConfigErrors.hpp",
+      "source_location": null,
+      "rationale": "The error handling architecture using std::expected<SConfigError> is a pervasive pattern. actionError() and configError() are god nodes in the graph but their semantic relationship is not captured."
+    },
+    {
+      "id": "render_pass_pipeline",
+      "label": "Render Pass Pipeline",
+      "file_type": "rationale",
+      "source_file": "src/render/pass/Pass.hpp",
+      "source_location": null,
+      "rationale": "CRenderPass collects IPassElement instances and renders them with damage-based simplification and occlusion culling. This pipeline pattern crosses 11 pass element types."
+    },
+    {
+      "id": "configuration_flow",
+      "label": "Configuration Data Flow",
+      "file_type": "rationale",
+      "source_file": "src/config/ConfigManager.hpp",
+      "source_location": null,
+      "rationale": "The end-to-end path from hyprland.conf file to affecting runtime state (via IConfigManager -> IValue -> consumer) is semantic metadata not captured in call graphs."
+    },
+    {
+      "id": "plugin_extension_surface",
+      "label": "Plugin Extension API Surface",
+      "file_type": "rationale",
+      "source_file": "src/plugins/PluginAPI.hpp",
+      "source_location": null,
+      "rationale": "The HyprlandAPI namespace defines the contract for dynamic extensions. Individual API functions appear in the graph but the namespace-as-extension-surface semantic is absent."
+    },
+    {
+      "id": "focus_state_machine",
+      "label": "Focus State Machine",
+      "file_type": "rationale",
+      "source_file": "src/desktop/state/FocusState.hpp",
+      "source_location": null,
+      "rationale": "CFocusState with 15+ eFocusReason values is a centralized state machine that inputs, config actions, layout algorithms, and compositor events all feed into."
+    },
+    {
+      "id": "animation_system",
+      "label": "Animation System Pipeline",
+      "file_type": "rationale",
+      "source_file": "src/managers/animation/AnimationManager.hpp",
+      "source_location": null,
+      "rationale": "The lifecycle from CAnimationPropertyConfig -> CAnimatedVariable<T> -> scheduleTick() -> frameTick() -> render-time value read is a template-driven pipeline."
+    },
+    {
+      "id": "ownership_lifetime",
+      "label": "SP/WP Ownership and Lifetime Pattern",
+      "file_type": "rationale",
+      "source_file": "src/desktop/DesktopTypes.hpp",
+      "source_location": null,
+      "rationale": "The PHLWINDOW/PHLWINDOWREF, PHLLS/PHLLSREF, etc. type alias system encodes ownership semantics (SP = owning, WP = non-owning observer) throughout the codebase."
+    }
+  ],
+  "proposed_edges": [
+    {
+      "source": "singleton_pattern",
+      "target": "g_pCompositor",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/Compositor.hpp",
+      "rationale": "g_pCompositor instantiates the global singleton pattern"
+    },
+    {
+      "source": "singleton_pattern",
+      "target": "g_pPluginSystem",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/plugins/PluginSystem.hpp",
+      "rationale": "g_pPluginSystem instantiates the global singleton pattern"
+    },
+    {
+      "source": "signal_slot_system",
+      "target": "CLuaEventHandler",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/config/lua/LuaEventHandler.hpp",
+      "rationale": "CLuaEventHandler bridges C++ CHyprSignal to Lua callbacks"
+    },
+    {
+      "source": "signal_slot_system",
+      "target": "CProtocolManager",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "src/managers/ProtocolManager.hpp",
+      "rationale": "CProtocolManager uses m_modeChangeListeners (signal listeners) for monitor mode changes"
+    },
+    {
+      "source": "error_propagation",
+      "target": "Config::Actions::actionError",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "src/config/shared/actions/ConfigActions.hpp",
+      "rationale": "actionError() is the primary error creation point for the config action system"
+    },
+    {
+      "source": "error_propagation",
+      "target": "Config::configError",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.99,
+      "source_file": "src/config/shared/ConfigErrors.hpp",
+      "rationale": "configError() defines the base error type that actionError delegates to"
+    },
+    {
+      "source": "render_pass_pipeline",
+      "target": "CRenderPass",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "src/render/pass/Pass.hpp",
+      "rationale": "CRenderPass implements the render pass pipeline"
+    },
+    {
+      "source": "render_pass_pipeline",
+      "target": "IPassElement",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/render/pass/PassElement.hpp",
+      "rationale": "IPassElement is the composable unit in the render pass pipeline"
+    },
+    {
+      "source": "configuration_flow",
+      "target": "Config::IConfigManager",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "src/config/ConfigManager.hpp",
+      "rationale": "IConfigManager is the entry point for the configuration flow"
+    },
+    {
+      "source": "configuration_flow",
+      "target": "Config::Lua::CConfigManager",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "src/config/lua/ConfigManager.hpp",
+      "rationale": "Lua CConfigManager implements IConfigManager for Lua-based config"
+    },
+    {
+      "source": "plugin_extension_surface",
+      "target": "HyprlandAPI::addTiledAlgo",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "src/plugins/PluginAPI.hpp",
+      "rationale": "addTiledAlgo is a plugin extension point for layout algorithms"
+    },
+    {
+      "source": "plugin_extension_surface",
+      "target": "HyprlandAPI::createFunctionHook",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "src/plugins/PluginAPI.hpp",
+      "rationale": "createFunctionHook is a plugin extension point for function hooking"
+    },
+    {
+      "source": "plugin_extension_surface",
+      "target": "HyprlandAPI::addDispatcherV2",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.98,
+      "source_file": "src/plugins/PluginAPI.hpp",
+      "rationale": "addDispatcherV2 is a plugin extension point for keybind dispatchers"
+    },
+    {
+      "source": "focus_state_machine",
+      "target": "CInputManager",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "src/managers/input/InputManager.hpp",
+      "rationale": "CInputManager drives focus changes via mouse movement and refocus()"
+    },
+    {
+      "source": "animation_system",
+      "target": "CDesktopAnimationManager",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "src/managers/animation/DesktopAnimationManager.hpp",
+      "rationale": "CDesktopAnimationManager orchestrates visual transition animations"
+    }
+  ]
+}

@@ -249,7 +249,7 @@ set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERAT
 
 set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
 set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.91)
-set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.47)
+set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.44)
 set(LIBINPUT_MINIMUM_VERSION 1.28)
 
 pkg_check_modules(
@@ -274,7 +274,7 @@ pkg_check_modules(
   lcms2
 )
 
-pkg_search_module(LUA REQUIRED IMPORTED_TARGET GLOBAL lua55 lua5.5 lua-55 lua-5.5 lua>=5.5 lua<5.6)
+pkg_search_module(LUA REQUIRED IMPORTED_TARGET GLOBAL lua55 lua5.5 lua-55 lua-5.5 lua>=5.5 lua<5.6 lua54 lua5.4 lua-54 lua-5.4 lua>=5.4 lua<5.5)
 
 find_package(hyprwayland-scanner 0.3.10 REQUIRED)
 

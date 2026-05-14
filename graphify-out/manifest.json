@@ -1,0 +1,2630 @@
+{
+  "/home/akarsh/Projects/Hyprland/src/Compositor.cpp": {
+    "mtime": 1778674405.4838934,
+    "hash": "6e4098085f2d97a0f46e6f79118327f3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/Compositor.hpp": {
+    "mtime": 1778674405.4841003,
+    "hash": "0318d98d6cc46ef365b3a9bd4eac07b2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/SharedDefs.hpp": {
+    "mtime": 1778674405.4841003,
+    "hash": "a97ccdbc13f10d832df845267da5beb2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/defines.hpp": {
+    "mtime": 1778674405.4878714,
+    "hash": "18d1dbf4b49617411d3e18c0ef3c9486"
+  },
+  "/home/akarsh/Projects/Hyprland/src/includes.hpp": {
+    "mtime": 1778674405.4940848,
+    "hash": "d60d65f5c4ff8a10ac9b65b8fd489f0f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/macros.hpp": {
+    "mtime": 1778674405.4955266,
+    "hash": "eb85276769f00969fdc6116d4c319a5a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/main.cpp": {
+    "mtime": 1778674405.4955266,
+    "hash": "4484b8a0b02191b763d762c5dd61bd25"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/ConfigManager.cpp": {
+    "mtime": 1778674405.4841003,
+    "hash": "141039a13b40da9eab56fda20c17eda1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/ConfigManager.hpp": {
+    "mtime": 1778674405.4841607,
+    "hash": "90c8a7db161eb1a59cf5c4ff83fa73b1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/ConfigValue.cpp": {
+    "mtime": 1778674405.4841607,
+    "hash": "3808caa33035dd103ef0edf7ec87f1da"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/ConfigValue.hpp": {
+    "mtime": 1778674405.4841607,
+    "hash": "7c53db256e223071e16299eb3604b848"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/legacy/ConfigManager.cpp": {
+    "mtime": 1778674405.4841607,
+    "hash": "47ebfbdf396a11eaf2acadee5726239d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/legacy/ConfigManager.hpp": {
+    "mtime": 1778674405.484335,
+    "hash": "fb28c5ae8a7b745ace73536af22ddc27"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/legacy/DefaultConfig.hpp": {
+    "mtime": 1778674405.484335,
+    "hash": "126fb00c37d01577073fe818893d42ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/legacy/DispatcherTranslator.cpp": {
+    "mtime": 1778674405.484335,
+    "hash": "0b2ceadf715b5daf3ee8a2420f15b284"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/legacy/DispatcherTranslator.hpp": {
+    "mtime": 1778674405.484335,
+    "hash": "d1f3eebfe870c9a870b8a02dbcecf348"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/ConfigManager.cpp": {
+    "mtime": 1778674405.484335,
+    "hash": "cf318828c41d3d422c64525c6d7a588d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/ConfigManager.hpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "40978bb463486db00b60b449a9a9ead8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/DefaultConfig.hpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "6233bafc7ecb65dcfc42b66574205b21"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/Emergency.hpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "92a722662e8db41c62a519f030aa05b0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/LuaBindings.cpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "5a9f16e8437a1c9fc84728e0b8e4ccc1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/LuaBindings.hpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "1dd1b255e15430941f15c8f180033031"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/LuaEventHandler.cpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "f0a7917f6903bf03e7f87a6afae88d68"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/LuaEventHandler.hpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "159d0dfd47c40cd0c605284a9b6a23b0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsConfigRules.cpp": {
+    "mtime": 1778674405.4844935,
+    "hash": "64caa0f7f835a462e6652338327524cb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsDispatcherUtils.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "41f34e00ef8ba83c664b58279b475a2d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsDispatchers.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "1e53425409cd7d34582b95f95d12af97"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsInternal.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "cd247dace8369b4b67bc0ec0d991c289"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsInternal.hpp": {
+    "mtime": 1778674405.484666,
+    "hash": "60b3c7b5674668837cc0393a1aaefb9f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsNotification.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "18bd92d075d23b87e2abd7ada2f43684"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsQuery.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "464e66ea7b8d17101353d1b53ae8c922"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsRegistration.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "a29cabfa051bb376bfbf89027705db94"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/bindings/LuaBindingsToplevel.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "aca35271201c921641c06ee3472541ed"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/layout/LuaLayoutContext.cpp": {
+    "mtime": 1778674405.484666,
+    "hash": "62eafa9eb1d51cc804bd14191737cce2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/layout/LuaLayoutContext.hpp": {
+    "mtime": 1778674405.4849474,
+    "hash": "9d1543c007d8f9f5f0a9517fa3d42d1b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/layout/LuaLayoutProvider.cpp": {
+    "mtime": 1778674405.4849474,
+    "hash": "19e123e131b5c97f96d61fac46130078"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/layout/LuaLayoutProvider.hpp": {
+    "mtime": 1778674405.4849474,
+    "hash": "2128b9d97017fe4d97c08189b1232bbc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/layout/LuaLayoutTarget.cpp": {
+    "mtime": 1778674405.4849474,
+    "hash": "cfb066ad2ec17b508206112222dc4c9d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/layout/LuaLayoutTarget.hpp": {
+    "mtime": 1778674405.4849474,
+    "hash": "a88da24c1d41b2f8092034670fbd8a62"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaEventSubscription.cpp": {
+    "mtime": 1778674405.4849474,
+    "hash": "7e4b40ba66d94cce4398867000213e9b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaEventSubscription.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "6e1970efd11c523e18e4a1b7a882ac97"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaGroup.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "9842b6d3b24d1e7ff4a98033921148bd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaGroup.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "5ed59d2c8fa43288c401c3d768a6e258"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaKeybind.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "6359cd4c195804b945bcc1c580624b4f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaKeybind.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "9c21f27c28a881d6ccf0f97fa71bf1ba"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaLayerRule.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "b1b458444c2e55bd7dccf0b3bedc8255"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaLayerRule.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "68043ef28583b8d566b2b83674798e7a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaLayerSurface.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "8bc45fe04de6eb9920c120ceb0e7e067"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaLayerSurface.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "b72f6dc35485ab1e630036c6f18cc391"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaMonitor.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "3010f7f3950f5b3b411f80c58933ba40"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaMonitor.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "773e480fe1e98c4cdec2b94d3059d1cf"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaNotification.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "5aba50e433039663a39a3893344ab9df"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaNotification.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "8af9b87918a92b02b61e5ed89fe3e13c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaObjectHelpers.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "43d60fb52f9c02f5536d19b92b4bceed"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaTimer.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "73da6833067391eab740da8f5a5445ad"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaTimer.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "481f058961f5a095b6a8435b305a7d51"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaWindow.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "c485558ceb111eb2a5d2ca49f6b52012"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaWindow.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "fcb2bb750c6beb825f5d321559399e25"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaWindowRule.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "1854f7efd067cd3c57cf45a3b1d1d247"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaWindowRule.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "371428a040c0499dfe8906d20ed5fdd1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaWorkspace.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "c6521d7cf354900b77c0c5a704a76639"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/objects/LuaWorkspace.hpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "58758eafc339492ad800d7e60900f040"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigBool.cpp": {
+    "mtime": 1778674405.4850461,
+    "hash": "156072793376795e85a28702946cb69c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigBool.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "ec26ba533e66b48eea0c5d92afcc0a16"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigColor.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "83ec3220f95c1d1252355cbd3fe52df4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigColor.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "a392bf7b0b883f33216cdd8cbef65e14"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigCssGap.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "c227edae8f38bde92b1fc81b8425af3a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigCssGap.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "56e343f87ad1579a457753438e4eca97"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigExpressionVec2.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "ba1f2f0354cf74ecb7ab9abbb4e046a7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigExpressionVec2.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "b0f7dada0b1d3c62f249463a17b240ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigFloat.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "7a0dd5d1bc8342bea112bf87dd2e4fd4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigFloat.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "f7c1f259684a1b1dac5c85b2a296ddc2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigFontWeight.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "9b0de577882e6d2407cef7d9a0659780"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigFontWeight.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "b530d1e799283302aa9f9754ca15ee90"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigGradient.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "bd86c8941c3b222746197e5264a6dd27"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigGradient.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "5ca57037900f653659a851f12f385eef"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigInt.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "86c52f56e7ce9dc222d6740556813353"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigInt.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "402a25e7d95ac8f9360096046011aaa1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigString.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "8f7685c69d25554e6fbacb5047100a6d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigString.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "e1a0c4b8c4b291e1f71ec370f4add061"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigUtils.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "23168af3ab9120c81ea74986ad994e69"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigUtils.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "ed60b1b5a3295be7ae83383982f19e91"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigValue.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "1b13f43c464d3c9eb0b6e4fa91b4f2c9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigValue.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "c7dd3d0d6152d7bca296b8a98a762f49"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigVec2.cpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "d4f18a2822153e014c4b18644815314f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/lua/types/LuaConfigVec2.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "5886e780e3380f6359d0fed14c1f1b73"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/ConfigErrors.hpp": {
+    "mtime": 1778674405.4853835,
+    "hash": "1e1b1ba5c3d4b1c5718a043edac38824"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/Types.hpp": {
+    "mtime": 1778674405.4856923,
+    "hash": "b26fd068e82d29cba9e5366505d20be9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/actions/ConfigActions.cpp": {
+    "mtime": 1778674405.4856923,
+    "hash": "8044d3b7b18d05b7315ae099bfb948a0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/actions/ConfigActions.hpp": {
+    "mtime": 1778674405.4858127,
+    "hash": "40e8c112eac21f3e6073216c740d9030"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/animation/AnimationTree.cpp": {
+    "mtime": 1778674405.4858127,
+    "hash": "5f6e1b5995df8229fb341480c0823161"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/animation/AnimationTree.hpp": {
+    "mtime": 1778674405.4858444,
+    "hash": "ad923df37b824de2613217e2c894ddf1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/complex/ComplexDataType.hpp": {
+    "mtime": 1778674405.4858444,
+    "hash": "01ae9d46b3e4d1de6e4ad8103c76471d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/complex/ComplexDataTypes.hpp": {
+    "mtime": 1778674405.4858813,
+    "hash": "7901513bb2b8d3adc183bb4dd0cfaca6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/inotify/ConfigWatcher.cpp": {
+    "mtime": 1778674405.4858813,
+    "hash": "5616da0d52d56d11a3a72599ce11268f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/inotify/ConfigWatcher.hpp": {
+    "mtime": 1778674405.4859211,
+    "hash": "ec08dd53d6a4ed019b0eeb73f1863da2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/monitor/MonitorRule.hpp": {
+    "mtime": 1778674405.4859211,
+    "hash": "107b9d269142e8f0ad9d1f367067a3fc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/monitor/MonitorRuleManager.cpp": {
+    "mtime": 1778674405.486198,
+    "hash": "903e0a186363064be094f20d18fa76c1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/monitor/MonitorRuleManager.hpp": {
+    "mtime": 1778674405.486198,
+    "hash": "79a569cde8e126231f0d347db6361095"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/monitor/Parser.cpp": {
+    "mtime": 1778674405.486198,
+    "hash": "d5856913d418bd0b3aa2ed2a4249ff00"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/monitor/Parser.hpp": {
+    "mtime": 1778674405.486198,
+    "hash": "497b31485fcc40e132b0f397d58eb465"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/parserUtils/ParserUtils.cpp": {
+    "mtime": 1778674405.486198,
+    "hash": "7321a6368e8edb0e867623bdcaf82f0e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/parserUtils/ParserUtils.hpp": {
+    "mtime": 1778674405.4863014,
+    "hash": "15bb4f579ce33eb21635b1944c5af204"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/workspace/WorkspaceRule.cpp": {
+    "mtime": 1778674405.4863014,
+    "hash": "6493d36bc940bf20c1a5e366a725ea25"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/workspace/WorkspaceRule.hpp": {
+    "mtime": 1778674405.4865208,
+    "hash": "de94320ad2347bd70bd1138fc85b712d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/workspace/WorkspaceRuleManager.cpp": {
+    "mtime": 1778674405.4865208,
+    "hash": "206679d73abffd505e20e77655b859f7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/shared/workspace/WorkspaceRuleManager.hpp": {
+    "mtime": 1778674405.4865208,
+    "hash": "3fcebe1e47d4378cca0b017a96bb645c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/supplementary/executor/Executor.cpp": {
+    "mtime": 1778674405.486572,
+    "hash": "9be2e224b69b023d2409539367e6fb4c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/supplementary/executor/Executor.hpp": {
+    "mtime": 1778674405.4866214,
+    "hash": "b3d388a8627800b74b073204ed0ff541"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/supplementary/jeremy/Jeremy.cpp": {
+    "mtime": 1778674405.4866214,
+    "hash": "d52856277bea82db496dcbc8c281cfe8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/supplementary/jeremy/Jeremy.hpp": {
+    "mtime": 1778674405.4866652,
+    "hash": "c9d3f92a3e3779cc67c266b59ace4c7a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/supplementary/propRefresher/PropRefresher.cpp": {
+    "mtime": 1778674405.4866652,
+    "hash": "ef2f824e4b6ac88037e99886c4f6dc87"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/supplementary/propRefresher/PropRefresher.hpp": {
+    "mtime": 1778674405.4867013,
+    "hash": "b83fbda1a11e1ffb9e56e91f93d5cf78"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/ConfigValues.cpp": {
+    "mtime": 1778674405.4867013,
+    "hash": "de8c9ee857266ca3c894b4da5734e5db"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/ConfigValues.hpp": {
+    "mtime": 1778674405.48689,
+    "hash": "c74030df6e7c0a4e0b014b3a2fc75903"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/BoolValue.cpp": {
+    "mtime": 1778674405.48689,
+    "hash": "f874f375d1a21556c8ccb55f2904526a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/BoolValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "285a530f182c81cd4d3fab1efc81a145"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/ColorValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "e05d489e51896e84347d60fa7d473d8f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/ColorValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "6837b98b936ccec6ffb588125cdac5df"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/CssGapValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "7b1be32f32d36c3610bf1803adb171f4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/CssGapValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "94f95ce5f25989635550a27defa4c951"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/FloatValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "0ff45ee5deb8af15ebd3bc0cc8c832cb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/FloatValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "501277915dd1d1caa752952ddeab02e9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/FontWeightValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "b58ced7c1764cfd4664135efb911fb6c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/FontWeightValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "97a75b7cc3198c4b32d58008c6b016c2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/GradientValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "5ba5c66442a34bdcda800a69c8ac5b80"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/GradientValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "38460db008b04f2cf38fac3d99e92dba"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/IValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "28bcd28fbbe76cd0af747032ddc6a86d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/IValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "ff98329ad2b210be3c3351b5e19e74c4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/IntValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "e933980f30e287fc95fa6bd5dd353543"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/IntValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "bb8200d0416a9f3b3c200e5162daa80f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/StringValue.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "3daa10ebdd799a84d7d375e53ff5598f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/StringValue.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "684b15dd03aaac4fb82dc8e917871a37"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/Vec2Value.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "543a9a01ff6d509712739f62e4d5a832"
+  },
+  "/home/akarsh/Projects/Hyprland/src/config/values/types/Vec2Value.hpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "e3c89737655949a10fe6034dacb7233e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/HyprCtl.cpp": {
+    "mtime": 1778674405.4869754,
+    "hash": "def8944b1e83532ef6ef45165fe2085f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/HyprCtl.hpp": {
+    "mtime": 1778674405.4875584,
+    "hash": "4c77ec6d4621a17d08193108fcbb0705"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/Overlay.cpp": {
+    "mtime": 1778674405.4875584,
+    "hash": "120e2c586d871fbf3a1be892c308e3f4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/Overlay.hpp": {
+    "mtime": 1778674405.4875584,
+    "hash": "bfe82281058fb8e8113b9daf2b74a06d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/TracyDefines.hpp": {
+    "mtime": 1778674405.4875584,
+    "hash": "7e6861a4ae6d02016acd1f33c4ca2598"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/crash/CrashReporter.cpp": {
+    "mtime": 1778674405.4875584,
+    "hash": "6808d6aa37938be29cb001a009b4135d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/crash/CrashReporter.hpp": {
+    "mtime": 1778674405.4877357,
+    "hash": "d477e05105811dba81e3ea88ad261b17"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/crash/SignalSafe.cpp": {
+    "mtime": 1778674405.4877357,
+    "hash": "80fdedcb15a96e8eea55fa4f5ee874ab"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/crash/SignalSafe.hpp": {
+    "mtime": 1778674405.4877357,
+    "hash": "b4179539bf8b7d78059da4d70a465866"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/log/Logger.cpp": {
+    "mtime": 1778674405.4877357,
+    "hash": "23750f0e2a49a39507b191ca9974b728"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/log/Logger.hpp": {
+    "mtime": 1778674405.4878714,
+    "hash": "aabcbb18be0828eecf6854f83a87d5ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/debug/log/RollingLogFollow.hpp": {
+    "mtime": 1778674405.4878714,
+    "hash": "b26675cef55b05aa9da53e2bda06132a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/DesktopTypes.hpp": {
+    "mtime": 1778674405.4878714,
+    "hash": "b2d0323de1d8a99d8cde66623f59fe3b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/Workspace.cpp": {
+    "mtime": 1778674405.487993,
+    "hash": "cac80002f93e4f1194f051e8e44cfbfe"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/Workspace.hpp": {
+    "mtime": 1778674405.487993,
+    "hash": "abcc5435c8771527c13da2e8d4418ecc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/history/WindowHistoryTracker.cpp": {
+    "mtime": 1778674405.487993,
+    "hash": "45188f4c995aa6004c62309435d2fb91"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/history/WindowHistoryTracker.hpp": {
+    "mtime": 1778674405.488086,
+    "hash": "4db3319469c48f635d1a67b5af48675c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/history/WorkspaceHistoryTracker.cpp": {
+    "mtime": 1778674405.488086,
+    "hash": "f663189278e568d55acb41806eb13c4d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/history/WorkspaceHistoryTracker.hpp": {
+    "mtime": 1778674405.488086,
+    "hash": "ba089bcf5705241ccd1ddd598ed2b13d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/reserved/ReservedArea.cpp": {
+    "mtime": 1778674405.488086,
+    "hash": "5087aa809fc800c808997d8b0fc5de9c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/reserved/ReservedArea.hpp": {
+    "mtime": 1778674405.4882302,
+    "hash": "3076bad2d8d1f09743b91b39d8ca6580"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/Engine.cpp": {
+    "mtime": 1778674405.4882302,
+    "hash": "6856b0f6887229405caaea6f0d7be2e7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/Engine.hpp": {
+    "mtime": 1778674405.4882867,
+    "hash": "9cbab135b0df8804929e325f8a94aa70"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/Rule.cpp": {
+    "mtime": 1778674405.4882867,
+    "hash": "b579c73d5a88bfe0a1fabdaae5a144d9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/Rule.hpp": {
+    "mtime": 1778674405.4882867,
+    "hash": "0acebd7143ef87291df359c9cad4ace2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/RuleWithEffects.hpp": {
+    "mtime": 1778674405.4882867,
+    "hash": "2ec032e8bcd2ae90318c90e6af406081"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/effect/EffectContainer.hpp": {
+    "mtime": 1778674405.4882867,
+    "hash": "ba9b86de02ec6d63b2d1349e96702019"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/layerRule/LayerRule.cpp": {
+    "mtime": 1778674405.4882867,
+    "hash": "256853f5229621e3a257221585211fdf"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/layerRule/LayerRule.hpp": {
+    "mtime": 1778674405.488517,
+    "hash": "174c8cae2a6baf039f31e83615f1119b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/layerRule/LayerRuleApplicator.cpp": {
+    "mtime": 1778674405.488517,
+    "hash": "96b6f7425e7e9036bb08c236f9b0e1fd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/layerRule/LayerRuleApplicator.hpp": {
+    "mtime": 1778674405.488517,
+    "hash": "1d81960b93d984d07a42b5d53e02c18c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/layerRule/LayerRuleEffectContainer.cpp": {
+    "mtime": 1778674405.488517,
+    "hash": "260c2432cfc8d810be8fc620ccb978e8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/layerRule/LayerRuleEffectContainer.hpp": {
+    "mtime": 1778674405.488517,
+    "hash": "b037949fa8bb52dbb684f25b4dfc54dd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/BoolMatchEngine.cpp": {
+    "mtime": 1778674405.4885452,
+    "hash": "0c38c2a4ba0f21c9bacc061c5faf11f8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/BoolMatchEngine.hpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "3721a579021146e05a1c293b42108324"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/IntMatchEngine.cpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "69bffacd9c557e993fa41ccc3b1b0fc4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/IntMatchEngine.hpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "92e5b7a6531287556355314b1c4b314a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/MatchEngine.cpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "e68eaea5893d269255290b034c45bb12"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/MatchEngine.hpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "964e56327561bcccd7d0c25a47e59434"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/RegexMatchEngine.cpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "180964ef2f7fb74aaf58cfd66d36f28c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/RegexMatchEngine.hpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "1e81a81db1429da47aef3a660fa94b6d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/TagMatchEngine.cpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "3b47c2b334891cd3282a3cd051baf91c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/TagMatchEngine.hpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "9a663458ebc58131534d163a959b8378"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/WorkspaceMatchEngine.cpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "80cec3a1a00ead3f3d383a1b4e222913"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/matchEngine/WorkspaceMatchEngine.hpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "46c905728dc8528a84233d2d8e6cc5fa"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/utils/SetUtils.hpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "387a793c1c14b5f3d0225591b43d3e12"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/windowRule/WindowRule.cpp": {
+    "mtime": 1778674405.4887917,
+    "hash": "7c6bf7c5a746abe1f9121fb13ee30c3a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/windowRule/WindowRule.hpp": {
+    "mtime": 1778674405.4890723,
+    "hash": "57787338656ca80a97dbfa5048ede8db"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/windowRule/WindowRuleApplicator.cpp": {
+    "mtime": 1778674405.4890723,
+    "hash": "e421b027a4dd3ff2adfa784e797efece"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/windowRule/WindowRuleApplicator.hpp": {
+    "mtime": 1778674405.4890723,
+    "hash": "4123d01fc6238485139ef69fe3731c33"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/windowRule/WindowRuleEffectContainer.cpp": {
+    "mtime": 1778674405.4890723,
+    "hash": "a4323dd8b30b4f08d1630efe8000c1ed"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/rule/windowRule/WindowRuleEffectContainer.hpp": {
+    "mtime": 1778674405.4890723,
+    "hash": "2c97f90d3c79990efeeb298279aea6a2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/state/FloatState.cpp": {
+    "mtime": 1778674405.4890723,
+    "hash": "e4ac1b12328e653c85e28130077c8dc0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/state/FloatState.hpp": {
+    "mtime": 1778674405.4892557,
+    "hash": "46755d56771577e43d7060fa5eda4824"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/state/FocusState.cpp": {
+    "mtime": 1778674405.4892557,
+    "hash": "ab267ee34a29c12cf185a473fd45ce97"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/state/FocusState.hpp": {
+    "mtime": 1778674405.4892557,
+    "hash": "c01cfacee1e7141d5aa22d6e4a280e0b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/types/MultiAnimatedVariable.hpp": {
+    "mtime": 1778674405.4892557,
+    "hash": "367de972f01e0e0d83d03ea86d20049f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/types/OverridableVar.hpp": {
+    "mtime": 1778674405.489403,
+    "hash": "be7c6f4612a562bbfa27b45154699912"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/GlobalViewMethods.cpp": {
+    "mtime": 1778674405.489403,
+    "hash": "a4117ac8236b9096afaf59905eb770f1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/GlobalViewMethods.hpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "2a3b0e34f7d8fe652075616ade7336d8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Group.cpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "6c4459fc659fffd5b685db681d812896"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Group.hpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "7b705c2683418bc365949c6c6b34691e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/LayerSurface.cpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "64acefb560ed5b65b6dfcf69bc0aedb9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/LayerSurface.hpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "4f687962d671e1c9cee9a1379ed76874"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Popup.cpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "12ff1c0f866d3eab28e5e925b7ffb2c8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Popup.hpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "e99dbd93758798999b6e2e9f9b648eb3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/SessionLock.cpp": {
+    "mtime": 1778674405.4894576,
+    "hash": "6bd64ef7a34ba4f666d844f9a824e935"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/SessionLock.hpp": {
+    "mtime": 1778674405.489545,
+    "hash": "d703997bf0ff1cf09f7cb8ff091056cd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Subsurface.cpp": {
+    "mtime": 1778674405.489545,
+    "hash": "a8fbfe4d2a7ae79de2a18a697785ae8d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Subsurface.hpp": {
+    "mtime": 1778674405.489545,
+    "hash": "7af4da4df70039f452f0e003ae86a988"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/View.cpp": {
+    "mtime": 1778674405.489545,
+    "hash": "3eba8e2d037a428907d81df865f0edc5"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/View.hpp": {
+    "mtime": 1778674405.489545,
+    "hash": "7f020d3a23b1828d96ed87435034f060"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/WLSurface.cpp": {
+    "mtime": 1778674405.489545,
+    "hash": "ee8b69e2b5fa6c1710a3c0228026e62b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/WLSurface.hpp": {
+    "mtime": 1778674405.489545,
+    "hash": "91f4557996c31c7e45d45cd897033410"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Window.cpp": {
+    "mtime": 1778674405.489545,
+    "hash": "0c3c8b655e7df6dde8d20aae155a2df7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/desktop/view/Window.hpp": {
+    "mtime": 1778674405.489545,
+    "hash": "34aa7fd2228906bd7df38b4872479b8c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/IHID.cpp": {
+    "mtime": 1778674405.489545,
+    "hash": "45f16ec892ef4bcf79f7486022af30ba"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/IHID.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "cd15c854bb04b62df53414d8db2184ab"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/IKeyboard.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "da42d93c54b8fb1a0f4da9ec4bd5ae1f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/IKeyboard.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "55ecfcca2aa4e8e179ff64a953951622"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/IPointer.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "2bba069696800bb9f13d22b57fde499d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/IPointer.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "c630892c184cd053021aac03df064a38"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/ITouch.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "27e9055f4f3973a984bbcc040018724b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/ITouch.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "c55534e8d95b919b39bf70a63ca4bb18"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/Keyboard.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "23f50bb8fd75c198d2edde7578f04789"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/Keyboard.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "0c9576a8b4fa5c16a583148a5956844d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/Mouse.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "c87e4cb4536b2b5581ecea171c1352ff"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/Mouse.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "26e74792dad16d63dbb84523e56a22ae"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/Tablet.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "ede033c317cd5889d1c5a109d5b2fc1c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/Tablet.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "963da7bbb84af07f217f0976caa0e81d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/TouchDevice.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "52877b74948164da5620d8c0bcb17c07"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/TouchDevice.hpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "2207e6e7dcf5951dfffd60ceb9212200"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/VirtualKeyboard.cpp": {
+    "mtime": 1778674405.4902952,
+    "hash": "90568fc65876e5dd79e9e38cae816e62"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/VirtualKeyboard.hpp": {
+    "mtime": 1778674405.4905453,
+    "hash": "d00c5a3f66bb8e0931b52182e75b6264"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/VirtualPointer.cpp": {
+    "mtime": 1778674405.4905453,
+    "hash": "4c6c914520978f4c2270f6f6b2739bd6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/devices/VirtualPointer.hpp": {
+    "mtime": 1778674405.4905453,
+    "hash": "694a2d269e4ce38bb579f065513b0555"
+  },
+  "/home/akarsh/Projects/Hyprland/src/errorOverlay/Overlay.cpp": {
+    "mtime": 1778674405.4905453,
+    "hash": "bddff40c048df499e267dcf2941ad145"
+  },
+  "/home/akarsh/Projects/Hyprland/src/errorOverlay/Overlay.hpp": {
+    "mtime": 1778674405.4911187,
+    "hash": "00c4bf7649308049cefe0283944f45dd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/event/EventBus.cpp": {
+    "mtime": 1778674405.4911187,
+    "hash": "dc299fdee819ab00b03522c431c31e41"
+  },
+  "/home/akarsh/Projects/Hyprland/src/event/EventBus.hpp": {
+    "mtime": 1778674405.4911578,
+    "hash": "9f19fcb6f3d1d684410f6ab6518c2d7b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/AnimatedVariable.hpp": {
+    "mtime": 1778674405.4911578,
+    "hash": "7eccef0dadb621e63c60a94fca41bd01"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/AsyncDialogBox.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "2c505aaa26a21626b1826f08b443b580"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/AsyncDialogBox.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "96923509f50e86d20536260c7cb6caf4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/ByteOperations.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "16238d48b1f60a93a9c5ec0446a4ed0f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/CMType.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "32dad488252647ba3c5f8f9eba641f20"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/CMType.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "27f8dc9455383797a646ddd52dcfbd12"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Color.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "4115d277991df06963eac4c299418df2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Color.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "c0b8b7e434a6e452166dc6477b8c8b17"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/CursorShapes.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "28d7ebf9b79737f105f22d0d5407463a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/DamageRing.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "e7fe4e4eb8416f10ceb96e5935738bd0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/DamageRing.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "02306d62794ba886e4a4a33273cc1dda"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Drm.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "3f06e1dfed7b7c9d4ddcdff8bca65ae6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Drm.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "1c8b1a16816201e86404e4f65d8a03e1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Format.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "5f836a08cc5ee71d7f60ce010fe5f7c5"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Format.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "2768880cd89141edf302bf407cfc9e35"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MainLoopExecutor.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "9da95dc697433bd3157c83f5dc29df97"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MainLoopExecutor.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "730200ca9aeb6102171539384f50a263"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MiscFunctions.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "22e4ca14235f8ee1747d378f7123136d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MiscFunctions.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "a87d712121e08864220437f3a8b6c225"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Monitor.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "367a709c8f2f46e5c74202e889a1682b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Monitor.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "4126049f11abdb8bc61ea154d5528901"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MonitorFrameScheduler.cpp": {
+    "mtime": 1778674405.49122,
+    "hash": "0d3ff67f54c03093aa2844ab918fb7b2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MonitorFrameScheduler.hpp": {
+    "mtime": 1778674405.49122,
+    "hash": "cc837c69c9189589a8e621808e3a111e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MonitorResources.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "1c3213351ad27ee92fe3c23ad24ac70e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MonitorResources.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "b848401196fe5e7641549cf3720ed822"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MonitorZoomController.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "ed45f70179ce2ae44966a010408ecece"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/MonitorZoomController.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "8e6eb8a4e6f893e0055d14411c35c0db"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/SdDaemon.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "a1999b2e8b871c563ba803de4628fddb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/SdDaemon.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "eb6c21dbcd203316f4b9542a0cc63687"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/Splashes.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "32ed6130cccd8d741350b86549b59047"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/SystemInfo.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "46ca36d1b9a2551fda4d918f898081f9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/SystemInfo.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "c4e5162597dee5e6acebcf6b42a808f1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/TagKeeper.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "cc905f8973f8d70d06868cc006039b7a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/TagKeeper.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "ed3441350e3a5e968ca79e5274a02295"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/TransferFunction.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "50d364635540443bc4cf9c8c7f197606"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/TransferFunction.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "a11824dab2ec125f8cd299920f98e7c3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/WLClasses.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "fe5dccebe5f983d772b9e508d332449e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/WLClasses.hpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "e1e84a03e81b3a80545328267e8fbb98"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/cm/ColorManagement.cpp": {
+    "mtime": 1778674405.4915452,
+    "hash": "62516c88ca8cf7f4e944de6c62239551"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/cm/ColorManagement.hpp": {
+    "mtime": 1778674405.4922872,
+    "hash": "5c0665904e25491d0eb843fb44e0fe12"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/cm/ICC.cpp": {
+    "mtime": 1778674405.4922872,
+    "hash": "c3c1c595cc3ba0fda1072c03b0c56eed"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/defer/Promise.hpp": {
+    "mtime": 1778674405.4922872,
+    "hash": "02e216f1e13ccd2231a824591a750e1f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/fs/FsUtils.cpp": {
+    "mtime": 1778674405.4924655,
+    "hash": "7817799cac79f48316f96eff6587e4f4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/fs/FsUtils.hpp": {
+    "mtime": 1778674405.4925385,
+    "hash": "4897caa6a16563f217f2e0861a412152"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/math/Direction.cpp": {
+    "mtime": 1778674405.4925385,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/math/Direction.hpp": {
+    "mtime": 1778674405.492596,
+    "hash": "a7d89d242c18126703a832ed063fb2f2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/math/Expression.cpp": {
+    "mtime": 1778674405.492596,
+    "hash": "a328f3cebe1d0432db57aac2f1740790"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/math/Expression.hpp": {
+    "mtime": 1778674405.492596,
+    "hash": "379cf53f47d5f36d015dc9784e698976"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/math/Math.cpp": {
+    "mtime": 1778674405.492596,
+    "hash": "364ce514b6259b0a7fcee3f3d6aab0d8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/math/Math.hpp": {
+    "mtime": 1778674405.492596,
+    "hash": "0c1e2d3728a30be46c1af18ed1f44c81"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/memory/Memory.hpp": {
+    "mtime": 1778674405.492596,
+    "hash": "73b2625037b639edf79cdf930c0f8822"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/signal/Signal.hpp": {
+    "mtime": 1778674405.492596,
+    "hash": "db4d103f9716a351b2c4a5335becee99"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/sync/SyncReleaser.cpp": {
+    "mtime": 1778674405.492596,
+    "hash": "4a62fcedc1b79ea4a7b407d26dfe4f65"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/sync/SyncReleaser.hpp": {
+    "mtime": 1778674405.493111,
+    "hash": "ced67f7b0ae91df98f00623f2ca87a54"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/sync/SyncTimeline.cpp": {
+    "mtime": 1778674405.493111,
+    "hash": "c26cdf363fcb8e26a4bdcd72bdad047e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/sync/SyncTimeline.hpp": {
+    "mtime": 1778674405.493111,
+    "hash": "664ea31e9a45c5e37c4354e0024171ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/time/Time.cpp": {
+    "mtime": 1778674405.493111,
+    "hash": "f35b5f35b10736389b035508af7d2273"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/time/Time.hpp": {
+    "mtime": 1778674405.4933968,
+    "hash": "daeb91142042eb51c358068970d35e84"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/time/Timer.cpp": {
+    "mtime": 1778674405.4933968,
+    "hash": "4d871ce9b852da9d3e38dbbd83d6524b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/time/Timer.hpp": {
+    "mtime": 1778674405.4933968,
+    "hash": "24f335ace7406f3c1ee103c4a2a2c86b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/helpers/varlist/VarList.hpp": {
+    "mtime": 1778674405.4933968,
+    "hash": "f31f0518edf7c138af90123ecac03495"
+  },
+  "/home/akarsh/Projects/Hyprland/src/i18n/Engine.cpp": {
+    "mtime": 1778674405.4935453,
+    "hash": "85f92a331a819339bf02824aa0ba9278"
+  },
+  "/home/akarsh/Projects/Hyprland/src/i18n/Engine.hpp": {
+    "mtime": 1778674405.4940848,
+    "hash": "5c85c2adf107546005d0bb5b34622084"
+  },
+  "/home/akarsh/Projects/Hyprland/src/init/initHelpers.cpp": {
+    "mtime": 1778674405.4940848,
+    "hash": "18264c7db85c107e5c8e6aa6701094cc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/init/initHelpers.hpp": {
+    "mtime": 1778674405.494225,
+    "hash": "20cc44e20b28392c910cc15b2ef52938"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/LayoutManager.cpp": {
+    "mtime": 1778674405.494225,
+    "hash": "92f773d400e7c60f72a027860f434544"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/LayoutManager.hpp": {
+    "mtime": 1778674405.4943192,
+    "hash": "b4d47b531b52dd304698e8bf61165673"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/Algorithm.cpp": {
+    "mtime": 1778674405.4943192,
+    "hash": "161511c995077a7767af7e8275e5ec25"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/Algorithm.hpp": {
+    "mtime": 1778674405.4944065,
+    "hash": "b1fe34963872bdf36947048028e9c5d7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/FloatingAlgorithm.cpp": {
+    "mtime": 1778674405.4944065,
+    "hash": "52c5519ec2a4b23dd6a6e9ebf07ffbf1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/FloatingAlgorithm.hpp": {
+    "mtime": 1778674405.4944065,
+    "hash": "ae8ae7bd6769c60a7e8ef91ecc6ba308"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/ModeAlgorithm.cpp": {
+    "mtime": 1778674405.4944065,
+    "hash": "3fdda90458ed3458f9f92136f14ec4bd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/ModeAlgorithm.hpp": {
+    "mtime": 1778674405.4944065,
+    "hash": "4ed11b89756353eb592fcc5559c7f04a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/TiledAlgorithm.hpp": {
+    "mtime": 1778674405.4944065,
+    "hash": "3d4c54d0ab97820d6189bcc86469d777"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/floating/default/DefaultFloatingAlgorithm.cpp": {
+    "mtime": 1778674405.4945865,
+    "hash": "d2ba798faf578df920288fd56d717043"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/floating/default/DefaultFloatingAlgorithm.hpp": {
+    "mtime": 1778674405.4946694,
+    "hash": "623fef503408f67de01276babe947a20"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/dwindle/DwindleAlgorithm.cpp": {
+    "mtime": 1778674405.4946923,
+    "hash": "a3b249f0783f4c6e162b9168016f1273"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/dwindle/DwindleAlgorithm.hpp": {
+    "mtime": 1778674405.4949472,
+    "hash": "8a5fa781af9ff52047e9ac933aa2ccbb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/master/MasterAlgorithm.cpp": {
+    "mtime": 1778674405.4949472,
+    "hash": "e853aa770f2cab561f570d7b374ff73a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/master/MasterAlgorithm.hpp": {
+    "mtime": 1778674405.4950695,
+    "hash": "07943cf080f016261587fe63aa2593e0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/monocle/MonocleAlgorithm.cpp": {
+    "mtime": 1778674405.4950695,
+    "hash": "dea9dd27a076847d27bfae94a0dafbe1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/monocle/MonocleAlgorithm.hpp": {
+    "mtime": 1778674405.49514,
+    "hash": "67c6679e01344d3096a7e2f79824eb00"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/scrolling/ScrollTapeController.cpp": {
+    "mtime": 1778674405.49514,
+    "hash": "c0acc366c02ac4033aa0999fe6b2fdf0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/scrolling/ScrollTapeController.hpp": {
+    "mtime": 1778674405.4952042,
+    "hash": "a31d77585444ed2277a566f5a431de68"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/scrolling/ScrollingAlgorithm.cpp": {
+    "mtime": 1778674405.4952042,
+    "hash": "81ff707b90635ea58e315c8d00a0dc5f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/algorithm/tiled/scrolling/ScrollingAlgorithm.hpp": {
+    "mtime": 1778674405.4952042,
+    "hash": "aeefa76db198f5c1b65188f4b0af8159"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/space/Space.cpp": {
+    "mtime": 1778674405.4952042,
+    "hash": "5f48826ef162d5cec46c5330c27ac165"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/space/Space.hpp": {
+    "mtime": 1778674405.4953728,
+    "hash": "60f28d9feca60bbd207569b8b7fb71be"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/supplementary/DragController.cpp": {
+    "mtime": 1778674405.4953728,
+    "hash": "f18657c4c4f502aaabf36236981a720a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/supplementary/DragController.hpp": {
+    "mtime": 1778674405.495438,
+    "hash": "daebf08a83cdd9a47bc612e559ed5b8a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/supplementary/WorkspaceAlgoMatcher.cpp": {
+    "mtime": 1778674405.495438,
+    "hash": "4a1bd12569b4bf41e293cf999568f0d2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/layout/supplementary/WorkspaceAlgoMatcher.hpp": {
+    "mtime": 1778674405.495438,
+    "hash": "c05e2882fda9ff11ba80a3d6d595bf2d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/ANRManager.cpp": {
+    "mtime": 1778674405.4955266,
+    "hash": "5d92298abf8e87f8a48b7f5bc7eb3b94"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/ANRManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "ce2011cc519a0b5f74eb4f26825efff7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/CursorManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "dd732bee1ceb2edfb370f366cd38d3d0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/CursorManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "59eb6614fd3c7a0f54c5ae7f33ba2ed6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/DonationNagManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "3770299025ecbaf188b0ff2961b32bf4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/DonationNagManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "158a84507d93aaea4b0aff92e97401df"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/EventManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "4f288b82635e9abf2308691a33812013"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/EventManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "89a33e6cf7fe07c57db9cb3fb2c7b8dc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/KeybindManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "3d207cc5af3e94404c8cfbc3a3edae3c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/KeybindManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "69c6810588049881f254057dd281c1cc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/PointerManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "235b7715c32052e0524913cb7229509b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/PointerManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "4630615f91b6c6e2db47ca342f74fef9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/ProtocolManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "25e8a7f4dc275c29a89a71fe433c552a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/ProtocolManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "e5976fde894980b04fc179f33c9f1d2f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/SeatManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "7a1cc943451a0a1eae17f9d7cf3482c2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/SeatManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "6f22328767311dca770519c3f27afcc2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/SessionLockManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "518aea8025262cb4a1721112915c5938"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/SessionLockManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "45e883777b39af0b2bd0fa042bb0b594"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/TokenManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "fbb693bcd75e557495be58eead2d9e7e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/TokenManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "2bb29db7e91342927ea6844735f44c33"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/VersionKeeperManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "e8cf94c1378638cdc0472e391f1c1f8c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/VersionKeeperManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "fd7a400fe0a986443a589fc8016a5f4f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/WelcomeManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "33a53959c13aca61dcc1ade434817e9c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/WelcomeManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "1d7a8bcfd23f4d3f2ddb4b2ad72a28a9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/XCursorManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "da32ccccd9bc4160aa1bb5d7519e2507"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/XCursorManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "be3c174eca45230b38cd8065d123c361"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/XWaylandManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "47b54a81b363581f29a018603f0ecfce"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/XWaylandManager.hpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "daf0c23c6af2dbd3cc35ed4eac7a017a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/animation/AnimationManager.cpp": {
+    "mtime": 1778674405.4957101,
+    "hash": "56b269fc1cfc71f507b3f16789094f7c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/animation/AnimationManager.hpp": {
+    "mtime": 1778674405.4964018,
+    "hash": "928534fcc26234c13bb8f4d6e37eca7e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/animation/DesktopAnimationManager.cpp": {
+    "mtime": 1778674405.4964018,
+    "hash": "51d50adae3e78c60baef5901cacc95ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/animation/DesktopAnimationManager.hpp": {
+    "mtime": 1778674405.4964018,
+    "hash": "342b2c18a4d1ca3bcb0348e9a365d8fa"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/cursor/CursorShapeOverrideController.cpp": {
+    "mtime": 1778674405.4964018,
+    "hash": "23d2c370ef392cf709644e1a2a2f2146"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/cursor/CursorShapeOverrideController.hpp": {
+    "mtime": 1778674405.4964802,
+    "hash": "4d3bd62bfc46bf9f71db9ca027468b33"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/eventLoop/EventLoopManager.cpp": {
+    "mtime": 1778674405.4964802,
+    "hash": "77118c5ede40d431f7d31e2c8881bda0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/eventLoop/EventLoopManager.hpp": {
+    "mtime": 1778674405.4965274,
+    "hash": "012258050a248577b4b2898a3df21de0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/eventLoop/EventLoopTimer.cpp": {
+    "mtime": 1778674405.4965274,
+    "hash": "b97bee34c9995b0e31594347b2716e0b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/eventLoop/EventLoopTimer.hpp": {
+    "mtime": 1778674405.4965274,
+    "hash": "95ea02be2fd65ee782c9056e8a7d6d95"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/IdleInhibitor.cpp": {
+    "mtime": 1778674405.4965274,
+    "hash": "472604baba284d86c6df1fdffd45ba20"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/InputManager.cpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "ddf8e264cde112bbf08ee48c3794547e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/InputManager.hpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "aac396aa142115b8d940a5e4f7eb9ba0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/InputMethodPopup.cpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "5446ca34c84a2c7e95e95e1e2a70dfdd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/InputMethodPopup.hpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "354d4c2bbe827ac61ccc65cd4d1490a0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/InputMethodRelay.cpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "f1ff451e0f749e27f32f7b8de9a97ef8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/InputMethodRelay.hpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "da3f51b03e620eb1d13b0ad36701afdb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/Tablets.cpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "77a1fe3cfe5add404e35773d9c111f62"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/TextInput.cpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "1fe80a9dd5f3bbbee9f45dd2b02e1a7b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/TextInput.hpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "27163bce5c27bfd024b77b52041087af"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/Touch.cpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "2b17cb1801c41e5c9d6f8d4d5c9ca4ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/UnifiedWorkspaceSwipeGesture.cpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "6d80ee8cd90de0b17354a7c21a633f44"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/UnifiedWorkspaceSwipeGesture.hpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "3e727d99078e51e8c88fea7f289e7c4f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/GestureTypes.hpp": {
+    "mtime": 1778674405.4966812,
+    "hash": "76ba5832fd01c550bdff699bf801a9dc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/TrackpadGestures.cpp": {
+    "mtime": 1778674405.4970767,
+    "hash": "acd4ada1de0deb27a9d6389349c1e700"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/TrackpadGestures.hpp": {
+    "mtime": 1778674405.4970767,
+    "hash": "1a0896d220469f57881424b41e00ef39"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/CloseGesture.cpp": {
+    "mtime": 1778674405.4970767,
+    "hash": "ae18b8b1b97a210d0fea419c1e44239a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/CloseGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "cc226c108e78653a1743b869cffe44af"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/CursorZoomGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "48549d768a99921579a2e72ea8abbc54"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/CursorZoomGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "5bf75d202ac851cf450b67e639879a69"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/DispatcherGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "b840140e22dbe19350da80dac84b48e1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/DispatcherGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "8357c060b029005507e1f93715d1f862"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/FloatGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "4df83d29d0be9ed7b4a4aa565beb9793"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/FloatGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "ffd56e676dcac534e241a2f2a7cb524f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/FullscreenGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "21bf580248f38f8f686264e67b018386"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/FullscreenGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "3ef61a40491e1a562688bbeb08d7744a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/ITrackpadGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "53a89e36aa00f6f2ce79be53cfa3bf18"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/ITrackpadGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "aa603235c70822b541c1f138c3ae1fa0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/LuaFunctionGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "9984424e8f015cb5eefbed1c3a607efb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/LuaFunctionGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "6bb5eb871b8fb623969fdb1c094fd264"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/MoveGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "c714bcf21c84dae8d74078d5ad67c719"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/MoveGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "56026c46e39d152bb88ccc519c52eda3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/ResizeGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "05384da279f3dbd94bd3d267dc6b76e6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/ResizeGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "090af919e3ca12d1f93e09282cc9433a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/ScrollMoveGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "0c4833789cbf288c7b767a94342f0e15"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/ScrollMoveGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "17f7d53aa266035bf883ce1936d87ca7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/SpecialWorkspaceGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "bb2a86052b3e00375400066dbb69cfbc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/SpecialWorkspaceGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "49466e823d59189190fbb8bfa4555fd2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/WorkspaceSwipeGesture.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "042c067a5c64c34869decb51efec5484"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/input/trackpad/gestures/WorkspaceSwipeGesture.hpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "859b0c2b14c9c41211f438401fd19db1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/permissions/DynamicPermissionManager.cpp": {
+    "mtime": 1778674405.4971333,
+    "hash": "93525c4e82e8dea34f7436f9a97ee694"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/permissions/DynamicPermissionManager.hpp": {
+    "mtime": 1778674405.4974818,
+    "hash": "9dd6c6528bc9cd43c78616b2ed6429e1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/screenshare/CursorshareSession.cpp": {
+    "mtime": 1778674405.4974818,
+    "hash": "22967bdcd507d1f9aa71713afac30be4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/screenshare/ScreenshareFrame.cpp": {
+    "mtime": 1778674405.4975557,
+    "hash": "e1c7da038058ffdd444a9954f8278936"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/screenshare/ScreenshareManager.cpp": {
+    "mtime": 1778674405.4975557,
+    "hash": "22469ce699d4475245819032723b1430"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/screenshare/ScreenshareManager.hpp": {
+    "mtime": 1778674405.4975557,
+    "hash": "6b8a1d214e1b77851824b9155922c47b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/managers/screenshare/ScreenshareSession.cpp": {
+    "mtime": 1778674405.4975557,
+    "hash": "5ca7438b23ab00864a268af92edd0f57"
+  },
+  "/home/akarsh/Projects/Hyprland/src/notification/Notification.cpp": {
+    "mtime": 1778674405.4975557,
+    "hash": "f95b8fcfa7fed17d2bad2a1789c91dce"
+  },
+  "/home/akarsh/Projects/Hyprland/src/notification/Notification.hpp": {
+    "mtime": 1778674405.497654,
+    "hash": "5dc678c1f668941ef1a4d64b5e0eaad1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/notification/NotificationOverlay.cpp": {
+    "mtime": 1778674405.497654,
+    "hash": "99b8981fac478d56a669c47466258aae"
+  },
+  "/home/akarsh/Projects/Hyprland/src/notification/NotificationOverlay.hpp": {
+    "mtime": 1778674405.497654,
+    "hash": "02338eb666385042f907de215f8a28ae"
+  },
+  "/home/akarsh/Projects/Hyprland/src/notification/SharedDefines.hpp": {
+    "mtime": 1778674405.497654,
+    "hash": "b5eb0d9d98278545b98ea515f10901d7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/pch/pch.hpp": {
+    "mtime": 1778674405.497654,
+    "hash": "64a5535fa80c5233e0e99fce10ba7ab6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/plugins/HookSystem.cpp": {
+    "mtime": 1778674405.497654,
+    "hash": "4b91c35422380196281516fc0da98774"
+  },
+  "/home/akarsh/Projects/Hyprland/src/plugins/HookSystem.hpp": {
+    "mtime": 1778674405.4977882,
+    "hash": "3b7cc95031f61bc9b466f0d2de810376"
+  },
+  "/home/akarsh/Projects/Hyprland/src/plugins/PluginAPI.cpp": {
+    "mtime": 1778674405.4977882,
+    "hash": "5a1d3e9029076ae2b4dad7a86e64df91"
+  },
+  "/home/akarsh/Projects/Hyprland/src/plugins/PluginAPI.hpp": {
+    "mtime": 1778674405.4977882,
+    "hash": "d8b2dd36d306bec778dbba67aab00217"
+  },
+  "/home/akarsh/Projects/Hyprland/src/plugins/PluginSystem.cpp": {
+    "mtime": 1778674405.4977882,
+    "hash": "10dd65b37ffce52d2ca4c4ba48b09902"
+  },
+  "/home/akarsh/Projects/Hyprland/src/plugins/PluginSystem.hpp": {
+    "mtime": 1778674405.4977882,
+    "hash": "7e11358403e905970d8bdfa1c1bcb6b6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/AlphaModifier.cpp": {
+    "mtime": 1778674405.4977882,
+    "hash": "efcc33a9c74c0bbd77a10ad249cac297"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/AlphaModifier.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "291fe4cc444b717fe9de77296bed50f4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/CTMControl.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "deb3b815fd02a75503a0107f88348b2d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/CTMControl.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "d23912f0e9cc67161ba6435be593a415"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ColorManagement.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "e9cc9b36651ef2730758f22dc63d99ca"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ColorManagement.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "b55a64caad05f9e523ea980b42bd90f2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/CommitTiming.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "a60b71110cd17a7138b74f21d9013db3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/CommitTiming.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "e34c53a23b74cf200914262076b81904"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ContentType.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "f5a581efd4b778793a90d587ac362256"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ContentType.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "311073bf84c00f64d3df0cc98e206ac2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/CursorShape.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "e72f32f53ef04e0730bab245a4f5b08f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/CursorShape.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "716f72941c350af40f9621c9b3d1adcf"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/DRMLease.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "60cac7a9008f03ccddd6ed8ac8a9d7b9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/DRMLease.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "17501e519935493d86ac35fba36e01b0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/DRMSyncobj.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "6baaa09e20b066ba68f3a28c434cab2a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/DRMSyncobj.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "c2b30207671bfa6b842f1c3df6c8f2f0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/DataDeviceWlr.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "0d50d6f7255b70ebeea23e1b2340b965"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/DataDeviceWlr.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "4c5868edff0b8776aa6f2c5bf620761f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ExtDataDevice.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "07bbe5fbcb09ad9e989560d0053af2af"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ExtDataDevice.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "8a1ee825c38891b22b0048ae772f59bb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ExtWorkspace.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "311d51186b5049b206ca97e74c0296f1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ExtWorkspace.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "13a6c7694765f943377ee52a6c4bcb4f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Fifo.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "b4308311d6c28efba99d8ee5d974a64f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Fifo.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "b7403630d4e62c11ddd3b02ca1aa6f6b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/FocusGrab.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "0a7bee7e8c60f0bcbc4df5adbe2329a6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/FocusGrab.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "de81c1092cb8cee6d89f41eed19f23ed"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ForeignToplevel.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "563f2a17a1cdb336286eafdbe5f9af7f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ForeignToplevel.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "a33b4cacc2fdf356fc04eda748b89093"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ForeignToplevelWlr.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "cd98fcf7ff51b335b1a9f2b25427a2f7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ForeignToplevelWlr.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "da622f4c7b9184c4951308e234488d4a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/FractionalScale.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "081001df6eb21f1c10faeb98f41734ab"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/FractionalScale.hpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "f121af3c296e6386c1453ab8fcc7abaf"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/GammaControl.cpp": {
+    "mtime": 1778674405.4979517,
+    "hash": "c8d339cdbf25c078ffffd1819e2e1a7b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/GammaControl.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "21fcf5112b2138d342dec6e218cbcab1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/GlobalShortcuts.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "dab317effdcea1938af5d6b24352f83e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/GlobalShortcuts.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "d623cb2d1d129c6cfc7ddd53ad150cdc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/HyprlandSurface.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "f4328f55db1912f23926b8a1f75c3ef9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/HyprlandSurface.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "8bcfa4a473ce427464641ec62bd41a7d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/IdleInhibit.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "e238acf31ba86b3464a8d666425faebd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/IdleInhibit.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "b63c30926c30db27b83f4c4a80d2aad2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/IdleNotify.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "9c60da132a5e725ba7410f0790b635c1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/IdleNotify.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "ead658d5e2cb42329dc49404d48a9603"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ImageCaptureSource.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "b0aa9e8e163cbb120772e19d6403db60"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ImageCaptureSource.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "af04f200bb815267e0976f74a73e48e6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ImageCopyCapture.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "9f006100b094abee9e71a322bd1798a1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ImageCopyCapture.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "4cf50bbcc70c80b28b7e6417216ad316"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/InputMethodV2.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "52cf476a7d4d8eca8ffd393c809802a9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/InputMethodV2.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "61a94792a295484d61a19ee00c350471"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/LayerShell.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "71f3f5625318fc11d0bd7ba81c6fdb74"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/LayerShell.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "192cbfbc482ae89d553e4d69541aae8d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/LinuxDMABUF.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "9a4ecc0b8dfbf86c0e428916c728e4c3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/LinuxDMABUF.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "58dbebf00d16f6e88742ddd5c9c70728"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/LockNotify.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "3b79945edf3973d99ebe697427bd08cc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/LockNotify.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "7257da90dcd98688ad76f49b7830e968"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/MesaDRM.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "8058332c939d009defd0ef754e17dc28"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/MesaDRM.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "d18ea04926d4635da8be525845c1dec3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/OutputManagement.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "4d42a96c8c05d73091a667885ebb1e37"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/OutputManagement.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "2725f7dcb85252c542cd0ee699b5c694"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/OutputPower.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "e24c974aa266b91a33fb14d0444a939f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/OutputPower.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "185f66e87ce46f33ea695972761cc05c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PointerConstraints.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "dacebc7efdfd337214cf5deb9a454a70"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PointerConstraints.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "3ed0ec698226ec33f4a48de31151cacf"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PointerGestures.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "acb7bbf77c22c522e04c8706b96ba45a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PointerGestures.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "d701404d9ac611bc0222d040198bbef0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PointerWarp.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "976fecb6d0d16570d47057b21124438b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PointerWarp.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "f1ecd1b15706f98360c726cd5efbb8ca"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PresentationTime.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "409df248831d1ad6fdc3e8959fad814d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PresentationTime.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "98f4324efbd47e81d28b8e7e3f4f21c3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PrimarySelection.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "06ebf618d4d375067c37184f7993dc03"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/PrimarySelection.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "779b0d1174135612b4d7f990e6ff4599"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/RelativePointer.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "31a107443724c1b331c565fd6c6aac4b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/RelativePointer.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "1eb99875f74a461d4ba276fce15b546e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Screencopy.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "afacec090e832263cb9f9864fa49255f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Screencopy.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "e3a8e02c8171cbc6dc3144651d7cee12"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/SecurityContext.cpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "966a8350938aa3f670436c232fa7334c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/SecurityContext.hpp": {
+    "mtime": 1778674405.4985454,
+    "hash": "d690dff0406e2d4ce516f2d68e3a37aa"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ServerDecorationKDE.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "6717083f12dfc4697ddc61a751a56a7c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ServerDecorationKDE.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "7ab2a775969588e3ef87d6632f5268c7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/SessionLock.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "e15ca6e676feafb32c6de14e5a169485"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/SessionLock.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "1f0d1f1eed612779dd830fc97be533aa"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ShortcutsInhibit.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "3987bd1cf8ccb046aad4d88db6c064db"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ShortcutsInhibit.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "0f9add5d555e1a49079a807983b95238"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/SinglePixel.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "d23836ce4725d1b63fd8b3ec6c284405"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/SinglePixel.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "e421cb1733ca469dfe746eab5a5205af"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Tablet.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "17784d64e0f57322adf5981824e45533"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Tablet.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "d0aa333b57f8f4532dd8ceda497ac237"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/TearingControl.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "5c879d0f1932637c30b9ac2469d4ca16"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/TearingControl.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "e78a69dcb29fce25b64c953c4b95660f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/TextInputV1.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "79d788bbd85f8d38d425ec8b2a758c70"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/TextInputV1.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "6ac91ce9ab5de3bfde04213897de7040"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/TextInputV3.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "f75cdeb17ed1b27049927442e319c13f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/TextInputV3.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "312855825e4c3060fa870f51144bf4dd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ToplevelExport.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "14e4b9895ac1549acce45c3e5d47a9c3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ToplevelExport.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "25999f2bf986995ee7fd2e562dbb7303"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ToplevelMapping.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "d38794c8a0a9a69eefeacb39f11d4d78"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/ToplevelMapping.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "1f078036ab1248fdd5cf45f768fcc9b2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Viewporter.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "8bbf1aed7c57c826bd78426bc96356ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/Viewporter.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "31f6422eb8ba2351dbe1d4fda62d4244"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/VirtualKeyboard.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "4aa55f6881d1f2ddc8bd8bfcee9ab5ed"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/VirtualKeyboard.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "fa0a123abed9fbaebf0b93b0041b8ec5"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/VirtualPointer.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "3f32c377637793b028c46c40ea99d248"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/VirtualPointer.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "6421b020d2ff355dba50c10561150529"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/WaylandProtocol.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "603575c0582427910ef8541f50caef40"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/WaylandProtocol.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "cfd9537ab7987f61d6758d400d103388"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGActivation.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "0edb075828f61892e82cc9ce8d1f7a30"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGActivation.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "5f50535d4ec98ceb29457129b614813b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGBell.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "430557f625addabade7761edff322469"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGBell.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "4232df43d1dea193278402d809a6d1c3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGDecoration.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "a87304859894f36f7f0c671e661d6c01"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGDecoration.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "dac3061a7b47980c3ebfa936b8cdbd9d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGDialog.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "770c0262d895aa86a9203f1426f84023"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGDialog.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "105fc82a8f7605592a3c21b7900ca8a1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGForeignV2.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "a957561fd9972606ac49add0991d4d35"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGForeignV2.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "426b2b6cb54c156d8edce10453b47cd1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGOutput.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "1988f4fd049a3ae19dbda461e334b9b9"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGOutput.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "80a11e088353ff31c3acfd91c5fec6ed"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGShell.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "5bc2b6e6735abaae18fb1a92a6945dbd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGShell.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "39bdec7ea6fdc9f78ae09b1f0468e1e8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGTag.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "dceeff25db5a187314931f7a80719252"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XDGTag.hpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "116a4f7f3294b6b8fdf1b2a82dba4d0e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XWaylandShell.cpp": {
+    "mtime": 1778674405.4995453,
+    "hash": "ef868451d71596c6b4c0234572977123"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/XWaylandShell.hpp": {
+    "mtime": 1778674405.5005455,
+    "hash": "58f7cd5d9b09631ef3c984583b6d280b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Compositor.cpp": {
+    "mtime": 1778674405.5005455,
+    "hash": "22e4ad2ee4f6fb799bf5321ff7db41bd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Compositor.hpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "f532f0c66d40ab3a2881fec754591516"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/DataDevice.cpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "f681344a6e938b6bf79473c40ec75efc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/DataDevice.hpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "e9009b71a40cec2fb079525929af7790"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Output.cpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "6573e88a2e57aade3a09ac6d7cfe167a"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Output.hpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "49209eda76c306a696dc9678e5598d3b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Seat.cpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "cc7405dab0adbcf14d875d2ecde413e1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Seat.hpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "4fb3b496d2cc871776eb0c9de570664e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Shm.cpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "a24175015c0600db872197ea2e000891"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Shm.hpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "f0bc4f149027951689073e98cadf08cb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Subcompositor.cpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "54b8eb577702ebb43037b1097da577db"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/core/Subcompositor.hpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "871c243a7861f527cb83b9fb7e8f79ae"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/Buffer.cpp": {
+    "mtime": 1778674405.5008357,
+    "hash": "a69d28b43997c29b08a978468e3489fa"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/Buffer.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "208b092634b94062d4d7c1d654ff381e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/ContentType.cpp": {
+    "mtime": 1778674405.50109,
+    "hash": "a1bfe532d13a266e3a13be70269a67f6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/ContentType.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "25be3f90ad47cc6efa9304e18f098ccd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/DMABuffer.cpp": {
+    "mtime": 1778674405.50109,
+    "hash": "d1436777afacedb259409561c48cb331"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/DMABuffer.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "139c55c06ec97e5f49eddd3f2a10f828"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/DataDevice.cpp": {
+    "mtime": 1778674405.50109,
+    "hash": "83f222597d91bb3bc4e1a423ce584182"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/DataDevice.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "15fbd407640bba3da435ba94bd836462"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/SurfaceRole.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "e8d34e191046f76eacaf4c752d46943e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/SurfaceState.cpp": {
+    "mtime": 1778674405.50109,
+    "hash": "0d27de8c0f585025838d1a0979905915"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/SurfaceState.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "679ed241351b13500abb5a1e5ccb0d21"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/SurfaceStateQueue.cpp": {
+    "mtime": 1778674405.50109,
+    "hash": "c55c8fc0a1db6139b71262e43d08af86"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/SurfaceStateQueue.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "da813191f3c32f1cfdb4a167c1eccf44"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/WLBuffer.cpp": {
+    "mtime": 1778674405.50109,
+    "hash": "cf4aa7cd93f9dd48e63cf96ccb0024ab"
+  },
+  "/home/akarsh/Projects/Hyprland/src/protocols/types/WLBuffer.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "34cfb891502a8fa3f933aa2241df7b63"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/AsyncResourceGatherer.hpp": {
+    "mtime": 1778674405.50109,
+    "hash": "9851c9520d2b267d3f7774fb58d7a27f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/ElementRenderer.cpp": {
+    "mtime": 1778674405.501351,
+    "hash": "00941a2acfcc9a1e3dc1295201c37430"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/ElementRenderer.hpp": {
+    "mtime": 1778674405.501351,
+    "hash": "52d6583b589e83cbf9485ae1ded3e42c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Framebuffer.cpp": {
+    "mtime": 1778674405.501351,
+    "hash": "739f6ce6dfe1ee3a0bab460c7c21ef3d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Framebuffer.hpp": {
+    "mtime": 1778674405.501351,
+    "hash": "89a71d1fed6804ec0af2c93979ca6325"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/GLRenderer.cpp": {
+    "mtime": 1778674405.501351,
+    "hash": "705d196f1be56ec5e64d6ddafc27ac8c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/GLRenderer.hpp": {
+    "mtime": 1778674405.501351,
+    "hash": "8dacfa5fb88578a2756d8d6ea700e4ea"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/OpenGL.cpp": {
+    "mtime": 1778674405.501351,
+    "hash": "397639d68fde28cf4d3397e4ddf5f385"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/OpenGL.hpp": {
+    "mtime": 1778674405.501351,
+    "hash": "84d84d725596807213dc26e098e5cde6"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Renderbuffer.cpp": {
+    "mtime": 1778674405.501351,
+    "hash": "a9461a3931201e9c379033de2961f859"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Renderbuffer.hpp": {
+    "mtime": 1778674405.501351,
+    "hash": "fd3a54221c936042a120d8ba3c2d8d7b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Renderer.cpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "fcde87587e86ab870f91e811f65084e0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Renderer.hpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "34cea1674f3b19ea56066b2e74be9285"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Shader.cpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "208258e7a29eecfb7881ef8f8c56aadd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Shader.hpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "9a24b7fb14c55dd374c5b8a260214a19"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/ShaderLoader.cpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "070608cb4b1f554ef68bb476b4065464"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/ShaderLoader.hpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "95f34022381b749785e21c3edcc73d2e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/SyncFDManager.cpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "97b9b26ecc46c272ff5319647e1f4b01"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/SyncFDManager.hpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "642a8cb8bb2c08894f58552b011edad0"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Texture.cpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "af4f345488db9abb32d929d3c05dc509"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Texture.hpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "609fd029d7c610ded396fe4fd9154491"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Transformer.cpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "d98b5b334c8832416487484492390fd3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/Transformer.hpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "6f0f2d32f7e4170e3add5dfb11eccdb3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/types.hpp": {
+    "mtime": 1778674405.5035455,
+    "hash": "4e7c7aca762d72e6005bba34074169e1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprBorderDecoration.cpp": {
+    "mtime": 1778674405.5015454,
+    "hash": "51b68208d26c88a65550871ae7a5ac0d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprBorderDecoration.hpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "59afca2b59bee92af3632b9e8a51b314"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprDropShadowDecoration.cpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "f68137f3429eedcc777d4f6ad0dc698e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprDropShadowDecoration.hpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "1040bdfbb9c0f989cc5ba2c8b482b41c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprGroupBarDecoration.cpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "f83d485bc5ac045d87fbec374426dc70"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprGroupBarDecoration.hpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "9ef15680aba4587f3ad40640a2f3729e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprInnerGlowDecoration.cpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "a93fe14231ba4f1b506b20e03acd735d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/CHyprInnerGlowDecoration.hpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "f4e7b751f2b422cbf5629594e4081511"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/DecorationPositioner.cpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "c303727940eec93b202f7eac5667bd11"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/DecorationPositioner.hpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "7efe6c27c30c6259defcd1dc89f5ab0e"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/IHyprWindowDecoration.cpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "3200ba4487014448d74159cc1870c14b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/decorations/IHyprWindowDecoration.hpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "ac3bd06c31ea3d3304a636a93d591d4c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLElementRenderer.cpp": {
+    "mtime": 1778674405.5021672,
+    "hash": "4cf448b933073075290f1edc7cb3ad4d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLElementRenderer.hpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "dc1521300f13eb88b5df56191c82ac0c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLFramebuffer.cpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "9a2f9fa375fe2a5d1e31250366722e56"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLFramebuffer.hpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "77c87b7ca77817967bb63937698069ae"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLRenderbuffer.cpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "e2d0fde5ff1639abdad1507c0e12d08f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLRenderbuffer.hpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "9641c48e9683fddcb7bb42d1df7f5b10"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLTexture.cpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "67138fa309e286dba234f0fe93e7ee03"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/gl/GLTexture.hpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "b7c877687bc2894ba2aa92c3b6b42593"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/BorderPassElement.cpp": {
+    "mtime": 1778674405.5024376,
+    "hash": "63095b5bc13841123014cf2bc677d266"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/BorderPassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "c9e32445436c72c064dd74df20a56a6c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/ClearPassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "5ae80290ca104e4e1f9959a929f9e59f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/ClearPassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "6d0ef699349e3a4094ed80e59c183677"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/FramebufferElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "96602b5330ad886065a4eef5b26bbb25"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/FramebufferElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "dfd3477e063217a8fcc4f8af2e3e8a83"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/InnerGlowPassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "061dc34d22d2ac974e0eb8c7625f37f2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/InnerGlowPassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "8604b55ca7907a99996f2ffd8c881939"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/Pass.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "b1ec255a3bd90f1212487d8150e85c50"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/Pass.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "c29b1b9f1a1af6996d83f4664f9d8fc7"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/PassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "4dac786e68e1cf36e77bf3b470de0cbb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/PassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "da3e028c8afe4e40814de608c2cdcf64"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/PreBlurElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "a8fb9cf81915011234fa873a53f76704"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/PreBlurElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "3f17ec7ca7300898988bda69bf1cef3c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/RectPassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "d9f297723278b99e72506587f5827bbc"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/RectPassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "c8fd65ec51f54c7c208123ceb9e49828"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/RendererHintsPassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "129469ce05f58464aaf58b9b1b5e085f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/RendererHintsPassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "e16c4636acb7bbed93b805fc033d7dc1"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/ShadowPassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "aaf42a8386c17a9c3182399c6840f135"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/ShadowPassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "26ee42bd90b9ccd631238709ea207655"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/SurfacePassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "caef966d76948a76c6e0e9f788bf633f"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/SurfacePassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "9d1fcbb77501ed14057ca274e65006eb"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/TexPassElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "7002041e9d56573e0c062a41715652db"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/TexPassElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "00c74f34a7ae18845b3c27f17bd175b8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/TextureMatteElement.cpp": {
+    "mtime": 1778674405.502574,
+    "hash": "e0f3ae494cca6737d0890ca9dbcbaf2d"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/pass/TextureMatteElement.hpp": {
+    "mtime": 1778674405.502574,
+    "hash": "0f1968af5a0b7c62007609f9d3b409c3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/shaders/glsl/constants.h": {
+    "mtime": 1778674405.5032196,
+    "hash": "d3b6654bf3fd08caff628c45c6d1103b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/render/shaders/glsl/defines.h": {
+    "mtime": 1778674405.5032196,
+    "hash": "8ba8735e1bf7d68eda79b4f4f7febab3"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/Dnd.cpp": {
+    "mtime": 1778674405.5035455,
+    "hash": "941d5c55160ec1fbb8bc8ae2d2b329c4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/Dnd.hpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "f4778152afbf9095859e7f7e7d067b7c"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/Server.cpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "ce89b1115c6a6b395b5fe8fbc566ac5b"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/Server.hpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "b8f7d47f490cce514899964562e8c191"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XDataSource.cpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "35d086fab8f80f3c3f03d1da95b82728"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XDataSource.hpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "f4bdd68fd6d2564e92748bafa53c1f24"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XSurface.cpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "f84e8112989bcd80cf80acc5860f37a4"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XSurface.hpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "87277431e4aba45381751c377466c2d2"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XWM.cpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "55faa8391add9a1558e2e032ae06a7cd"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XWM.hpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "5a69514479b4c5df69c19f51856301d8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XWayland.cpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "2c0d36b41d7d8176a1b08961269360c8"
+  },
+  "/home/akarsh/Projects/Hyprland/src/xwayland/XWayland.hpp": {
+    "mtime": 1778674405.5040724,
+    "hash": "c8c963523ef3c2d96560a3f7e23fd2c7"
+  }
+}

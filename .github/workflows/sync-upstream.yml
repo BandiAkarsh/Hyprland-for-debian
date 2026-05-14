@@ -1,0 +1,46 @@
+name: Auto-sync with upstream Hyprland
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday 6AM UTC
+  workflow_dispatch:      # Manual trigger via GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: debian-stable
+          fetch-depth: 0
+
+      - name: Merge latest upstream tag
+        run: |
+          git remote add upstream https://github.com/hyprwm/Hyprland.git
+          git fetch upstream --tags
+          LATEST=$(git tag -l 'v*' --sort=-v:refname | head -1)
+          echo "Merging $LATEST"
+          git merge tags/$LATEST --no-edit 2>&1 || echo "CONFLICT" > conflict.txt
+
+      - name: Re-apply Debian compatibility patches
+        run: |
+          # Ensure Lua 5.4 fallback is present
+          if ! grep -q "lua54" CMakeLists.txt; then
+            sed -i 's/lua>=5.5 lua<5.6/lua>=5.5 lua<5.6 lua54 lua5.4 lua-54 lua-5.4 lua>=5.4 lua<5.5/' CMakeLists.txt
+          fi
+          # Ensure wayland-protocols version is lowered
+          if grep -q "WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.47" CMakeLists.txt; then
+            sed -i 's/WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.47/WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.44/' CMakeLists.txt
+          fi
+
+      - name: Push merged result
+        if: success() && hashFiles('conflict.txt') == ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git push origin debian-stable
+
+      - name: Notify on conflict
+        if: hashFiles('conflict.txt') != ''
+        run: |
+          echo "::warning::Merge conflict detected! Manual intervention required."
+          echo "Fix conflicts in your local clone then push."
