@@ -18,7 +18,7 @@ LIBS=(
   "hyprutils,v0.13.1,https://github.com/hyprwm/hyprutils"
   "hyprgraphics,v0.5.1,https://github.com/hyprwm/hyprgraphics"
   "hyprlang,v0.6.7,https://github.com/hyprwm/hyprlang"
-  "hyprwayland-scanner,v0.3.10,https://github.com/hyprwm/hyprwayland-scanner"
+  "hyprwayland-scanner,v0.4.1,https://github.com/hyprwm/hyprwayland-scanner"
   "hyprcursor,v0.1.9,https://github.com/hyprwm/hyprcursor"
   "aquamarine,v0.10.0,https://github.com/hyprwm/aquamarine"
 )
