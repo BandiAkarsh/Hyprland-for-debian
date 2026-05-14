@@ -13,7 +13,8 @@ apt install -y cmake g++ pkg-config libwayland-dev wayland-protocols \
   libxcb*-dev libgl1-mesa-dev libgles2-mesa-dev libegl1-mesa-dev \
   glslang-dev glslang-tools uuid-dev liblcms2-dev libre2-dev \
   libmuparser-dev liblua5.4-dev libmagic-dev librsvg2-dev libpugixml-dev \
-  libseat-dev libdisplay-info-dev libjxl-dev libheif-dev libzip-dev libtomlplusplus-dev
+  libseat-dev libdisplay-info-dev libjxl-dev libheif-dev libzip-dev libtomlplusplus-dev \
+  hwdata libglvnd-dev
 
 LIBS=(
   "hyprutils,v0.13.1,https://github.com/hyprwm/hyprutils"
