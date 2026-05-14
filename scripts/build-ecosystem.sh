@@ -51,7 +51,7 @@ for entry in "${LIBS[@]}"; do
   # GCC 14 + hyprwayland-scanner 0.4 generates zero-length vtable arrays
   # which -Wpedantic treats as error. Add override flag after -Wpedantic.
   if [ "$name" = "aquamarine" ]; then
-    sed -i '/-Wpedantic/a\  -Wno-zero-length-array' CMakeLists.txt
+    sed -i 's/-Wpedantic)/-Wpedantic\n  -Wno-zero-length-array)/' CMakeLists.txt
   fi
 
   cmake -B build -DCMAKE_BUILD_TYPE=Release \
