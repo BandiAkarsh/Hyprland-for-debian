@@ -24,9 +24,11 @@ jobs:
             libseat-dev libdisplay-info-dev hwdata libglvnd-dev git curl ca-certificates \
             wget libjxl-dev libheif-dev libzip-dev libtomlplusplus-dev
 
-      - name: Initialize git submodules
+      - name: Fetch submodules (git not available during checkout in minimal container)
         run: |
-          git submodule update --init
+          git clone --depth 1 https://github.com/canihavesomecoffee/udis86 subprojects/udis86
+          git clone --depth 1 https://github.com/hyprwm/hyprland-protocols subprojects/hyprland-protocols
+          git clone --depth 1 https://github.com/wolfpld/tracy subprojects/tracy
 
       - name: Build ecosystem libraries
         run: |
