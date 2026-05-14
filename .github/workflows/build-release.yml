@@ -11,8 +11,6 @@ jobs:
       image: debian:trixie
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Install system dependencies
         run: |
@@ -25,6 +23,10 @@ jobs:
             libre2-dev libmuparser-dev liblua5.4-dev libmagic-dev librsvg2-dev libpugixml-dev \
             libseat-dev libdisplay-info-dev hwdata libglvnd-dev git curl ca-certificates \
             wget libjxl-dev libheif-dev libzip-dev libtomlplusplus-dev
+
+      - name: Initialize git submodules
+        run: |
+          git submodule update --init
 
       - name: Build ecosystem libraries
         run: |
