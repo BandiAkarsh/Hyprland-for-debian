@@ -95,12 +95,12 @@ def fix_append_range(text):
         if idx == -1:
             result.append(text[i:])
             break
-        result.append(text[i:idx])
         # Find the variable name (word before '.append_range')
         start = idx - 1
         while start >= 0 and (text[start].isalnum() or text[start] == '_'):
             start -= 1
         var = text[start+1:idx]
+        result.append(text[i:start+1])  # whitespace before var name (not var itself)
         # Find matching close paren (handling nesting)
         depth = 1
         j = idx + len('.append_range(')
