@@ -3189,7 +3189,7 @@ void CCompositor::ensurePersistentWorkspacesPresent(const std::vector<Config::CW
             if (!w->isPersistent())
                 continue;
 
-            if (std::ranges::contains(persistentFound, w.lock()))
+            if (std::ranges::find(persistentFound, w.lock()) != persistentFound.end())
                 continue;
 
             toDowngrade.emplace_back(w);

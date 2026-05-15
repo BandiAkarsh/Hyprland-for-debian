@@ -778,7 +778,7 @@ std::string deviceNameToInternalString(const std::string& in) {
                       }
                   });
 
-    return result | std::ranges::to<std::string>();
+    return std::string{result.begin(), result.end()};
 }
 
 static const std::vector<const char*> PKGCONF_PATHS = {"/usr/lib/pkgconfig", "/usr/local/lib/pkgconfig", "/usr/lib64/pkgconfig"};

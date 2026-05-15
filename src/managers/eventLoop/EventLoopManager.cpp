@@ -150,14 +150,14 @@ void CEventLoopManager::onTimerFire() {
 }
 
 void CEventLoopManager::addTimer(SP<CEventLoopTimer> timer) {
-    if (std::ranges::contains(m_timers.timers, timer))
+    if (std::ranges::find(m_timers.timers, timer) != m_timers.timers.end())
         return;
     m_timers.timers.emplace_back(timer);
     scheduleRecalc();
 }
 
 void CEventLoopManager::removeTimer(SP<CEventLoopTimer> timer) {
-    if (!std::ranges::contains(m_timers.timers, timer))
+    if (std::ranges::find(m_timers.timers, timer) == m_timers.timers.end())
         return;
     std::erase_if(m_timers.timers, [timer](const auto& t) { return timer == t; });
     scheduleRecalc();

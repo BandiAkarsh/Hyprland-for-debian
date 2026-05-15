@@ -17,7 +17,9 @@ using namespace Hyprutils::Memory;
 #define SP CSharedPointer
 
 SUBTEST(expectBlockedByAll, const std::string& blockedByLine, const std::set<std::string>& expectedBlockedBy) {
-    const std::set<std::string> blockedBy = blockedByLine | std::ranges::views::split(',') | std::ranges::to<std::set<std::string>>();
+    std::set<std::string> blockedBy;
+    for (auto&& part : blockedByLine | std::ranges::views::split(','))
+        blockedBy.emplace(part.begin(), part.end());
     NLog::log("blockedBy = {}", blockedBy);
     NLog::log("expectedBlockedBy = {}", expectedBlockedBy);
     ASSERT(std::ranges::includes(blockedBy, expectedBlockedBy), true);

@@ -1237,17 +1237,20 @@ WP<CShader> CHyprOpenGLImpl::renderToOutputInternal() {
         p                      = p.transform(Math::wlTransformToHyprutils(pMonitor->m_transform), pMonitor->m_pixelSize);
         shader->setUniformFloat2(SHADER_POINTER, p.x / pMonitor->m_pixelSize.x, p.y / pMonitor->m_pixelSize.y);
 
-        std::vector<float> pressedPos = m_pressedHistoryPositions | std::views::transform([&](const Vector2D& vec) {
-                                            Vector2D pPressed = ((vec - pMonitor->m_position) * pMonitor->m_scale);
-                                            pPressed          = pPressed.transform(Math::wlTransformToHyprutils(pMonitor->m_transform), pMonitor->m_pixelSize);
-                                            return std::array<float, 2>{pPressed.x / pMonitor->m_pixelSize.x, pPressed.y / pMonitor->m_pixelSize.y};
-                                        }) |
-            std::views::join | std::ranges::to<std::vector<float>>();
+        std::vector<float> pressedPos;
+        for (auto const& vec : m_pressedHistoryPositions) {
+            Vector2D pPressed = ((vec - pMonitor->m_position) * pMonitor->m_scale);
+            pPressed          = pPressed.transform(Math::wlTransformToHyprutils(pMonitor->m_transform), pMonitor->m_pixelSize);
+            pressedPos.push_back(pPressed.x / pMonitor->m_pixelSize.x);
+            pressedPos.push_back(pPressed.y / pMonitor->m_pixelSize.y);
+        }
 
         shader->setUniform2fv(SHADER_POINTER_PRESSED_POSITIONS, pressedPos.size(), pressedPos);
 
-        std::vector<float> pressedTime =
-            m_pressedHistoryTimers | std::views::transform([](const CTimer& timer) { return timer.getSeconds(); }) | std::ranges::to<std::vector<float>>();
+        std::vector<float> pressedTime;
+        pressedTime.reserve(m_pressedHistoryTimers.size());
+        for (auto const& timer : m_pressedHistoryTimers)
+            pressedTime.push_back(timer.getSeconds());
 
         shader->setUniform1fv(SHADER_POINTER_PRESSED_TIMES, pressedTime.size(), pressedTime);
 

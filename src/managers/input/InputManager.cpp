@@ -1599,7 +1599,7 @@ void CInputManager::onKeyboardKey(const IKeyboard::SKeyEvent& event, SP<IKeyboar
             IME->setKeyboard(pKeyboard);
             IME->sendKey(event.timeMs, event.keycode, state);
         } else {
-            const auto CONTAINS = std::ranges::contains(m_pressed, event.keycode);
+            const auto CONTAINS = std::ranges::find(m_pressed, event.keycode) != m_pressed.end();
 
             if (CONTAINS && pressed)
                 return;

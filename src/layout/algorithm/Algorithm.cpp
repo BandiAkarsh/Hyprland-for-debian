@@ -40,7 +40,7 @@ void CAlgorithm::addTarget(SP<ITarget> target) {
 }
 
 void CAlgorithm::removeTarget(SP<ITarget> target) {
-    const bool IS_FLOATING = std::ranges::contains(m_floatingTargets, target);
+    const bool IS_FLOATING = std::ranges::find(m_floatingTargets, target) != m_floatingTargets.end();
 
     if (IS_FLOATING) {
         std::erase(m_floatingTargets, target);
@@ -48,7 +48,7 @@ void CAlgorithm::removeTarget(SP<ITarget> target) {
         return;
     }
 
-    const bool IS_TILED = std::ranges::contains(m_tiledTargets, target);
+    const bool IS_TILED = std::ranges::find(m_tiledTargets, target) != m_tiledTargets.end();
 
     if (IS_TILED) {
         std::erase(m_tiledTargets, target);
@@ -301,7 +301,7 @@ SP<ITarget> CAlgorithm::getNextCandidate(SP<ITarget> old) {
 }
 
 void CAlgorithm::setTargetGeom(const CBox& box, SP<ITarget> target) {
-    if (!target->floating() || !std::ranges::contains(m_floatingTargets, target))
+    if (!target->floating() || std::ranges::find(m_floatingTargets, target) == m_floatingTargets.end())
         return;
 
     m_floating->setTargetGeom(box, target);

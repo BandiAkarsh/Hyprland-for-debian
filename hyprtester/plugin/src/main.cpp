@@ -269,7 +269,7 @@ static SDispatchResult vkb(std::string in) {
     const uint32_t TESTKEY = 1;
 
     tkb0->sendKey(TESTKEY, true);
-    if (!std::ranges::contains(PRESSED, TESTKEY)) {
+    if (std::ranges::find(PRESSED, TESTKEY) == PRESSED.end()) {
         return {
             .success = false,
             .error   = "Expected pressed key not found",
@@ -278,7 +278,7 @@ static SDispatchResult vkb(std::string in) {
 
     tkb1->sendKey(TESTKEY, true);
     tkb0->sendKey(TESTKEY, false);
-    if (!std::ranges::contains(PRESSED, TESTKEY)) {
+    if (std::ranges::find(PRESSED, TESTKEY) == PRESSED.end()) {
         return {
             .success = false,
             .error   = "Expected pressed key not found (kb share state)",
@@ -287,7 +287,7 @@ static SDispatchResult vkb(std::string in) {
 
     vkb0->sendKey(TESTKEY, true);
     tkb1->sendKey(TESTKEY, false);
-    if (std::ranges::contains(PRESSED, TESTKEY)) {
+    if (std::ranges::find(PRESSED, TESTKEY) != PRESSED.end()) {
         return {
             .success = false,
             .error   = "Expected released key found in pressed (vkb no share state)",

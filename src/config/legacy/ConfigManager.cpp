@@ -2014,13 +2014,13 @@ std::optional<std::string> CConfigManager::handleWindowrule(const std::string& c
 
         const bool FIRST_IS_PROP = el.starts_with("match:");
         const auto FIRST         = FIRST_IS_PROP ? el.substr(6, spacePos - 6) : el.substr(0, spacePos);
-        if (FIRST_IS_PROP && std::ranges::contains(PROPS, FIRST)) {
+        if (FIRST_IS_PROP && std::ranges::find(PROPS, FIRST) != PROPS.end()) {
             // it's a prop
             const auto PROP = Desktop::Rule::matchPropFromString(FIRST);
             if (!PROP.has_value())
                 return std::format("invalid prop {}", el);
             rule->registerMatch(*PROP, std::string{el.substr(spacePos + 1)});
-        } else if (!FIRST_IS_PROP && std::ranges::contains(EFFECTS, FIRST)) {
+        } else if (!FIRST_IS_PROP && std::ranges::find(EFFECTS, FIRST) != EFFECTS.end()) {
             // it's an effect
             const auto EFFECT = Desktop::Rule::windowEffects()->get(FIRST);
             if (!EFFECT.has_value())
@@ -2055,13 +2055,13 @@ std::optional<std::string> CConfigManager::handleLayerrule(const std::string& co
 
         const bool FIRST_IS_PROP = el.starts_with("match:");
         const auto FIRST         = FIRST_IS_PROP ? el.substr(6, spacePos - 6) : el.substr(0, spacePos);
-        if (FIRST_IS_PROP && std::ranges::contains(PROPS, FIRST)) {
+        if (FIRST_IS_PROP && std::ranges::find(PROPS, FIRST) != PROPS.end()) {
             // it's a prop
             const auto PROP = Desktop::Rule::matchPropFromString(FIRST);
             if (!PROP.has_value())
                 return std::format("invalid prop {}", el);
             rule->registerMatch(*PROP, std::string{el.substr(spacePos + 1)});
-        } else if (!FIRST_IS_PROP && std::ranges::contains(EFFECTS, FIRST)) {
+        } else if (!FIRST_IS_PROP && std::ranges::find(EFFECTS, FIRST) != EFFECTS.end()) {
             // it's an effect
             const auto EFFECT = Desktop::Rule::layerEffects()->get(FIRST);
             if (!EFFECT.has_value())

@@ -80,7 +80,7 @@ CGroup::~CGroup() {
 }
 
 bool CGroup::has(PHLWINDOW w) const {
-    return std::ranges::contains(m_windows, w);
+    return std::ranges::find(m_windows, w) != m_windows.end();
 }
 
 void CGroup::add(PHLWINDOW w) {

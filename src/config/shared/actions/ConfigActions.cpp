@@ -1652,7 +1652,7 @@ ActionResult Actions::cycleNext(const bool next, std::optional<bool> onlyTiled, 
                 &typeid(Layout::Tiled::CMasterAlgorithm),
             };
 
-            if (std::ranges::contains(LAYOUTS_WITH_CYCLE_NEXT, &typeid(*SPACE->algorithm()->tiledAlgo().get()))) {
+            if (std::ranges::find(LAYOUTS_WITH_CYCLE_NEXT, &typeid(*SPACE->algorithm()->tiledAlgo().get())) != LAYOUTS_WITH_CYCLE_NEXT.end()) {
                 // NOLINTNEXTLINE
                 Actions::layoutMessage(!next ? "cyclenext, b" : "cyclenext");
                 return {};
