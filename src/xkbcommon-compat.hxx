@@ -8,14 +8,12 @@
 #define XKB_KEYMAP_FORMAT_TEXT_V2 XKB_KEYMAP_FORMAT_TEXT_V1
 
 // xkb_keymap_new_from_names2 was added in 1.11.0. For older versions,
-// wrap xkb_keymap_new_from_names (which always uses V1 format).
-// Note: xkb_keymap_new_from_names has 2 args in < 1.11.0, 3 args in >= 1.11.0.
+// wrap xkb_keymap_new_from_names (which takes ctx, names, flags).
 inline xkb_keymap* xkb_keymap_new_from_names2(struct xkb_context* ctx,
                                                const struct xkb_rule_names* names,
                                                enum xkb_keymap_format format,
                                                enum xkb_keymap_compile_flags flags) {
     (void)format;
-    (void)flags;
-    return xkb_keymap_new_from_names(ctx, names);
+    return xkb_keymap_new_from_names(ctx, names, flags);
 }
 #endif
