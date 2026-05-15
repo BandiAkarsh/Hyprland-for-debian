@@ -249,7 +249,7 @@ configure_file(
 
 set_source_files_properties(${CMAKE_SOURCE_DIR}/src/version.h PROPERTIES GENERATED TRUE)
 
-set(XKBCOMMON_MINIMUM_VERSION 1.11.0)
+set(XKBCOMMON_MINIMUM_VERSION 1.7.0)
 set(WAYLAND_SERVER_MINIMUM_VERSION 1.22.91)
 set(WAYLAND_SERVER_PROTOCOLS_MINIMUM_VERSION 1.44)
 set(LIBINPUT_MINIMUM_VERSION 1.28)
@@ -296,6 +296,19 @@ target_link_libraries(Hyprland hyprland_lib)
 
 target_include_directories(hyprland_lib PUBLIC ${deps_INCLUDE_DIRS} ${LUA_INCLUDE_DIRS})
 target_include_directories(Hyprland PUBLIC ${deps_INCLUDE_DIRS} ${LUA_INCLUDE_DIRS})
+
+# xkbcommon < 1.11.0 compat: check if XKB_KEYMAP_FORMAT_TEXT_V2 exists
+include(CheckCXXSourceCompiles)
+set(CMAKE_REQUIRED_INCLUDES ${deps_INCLUDE_DIRS})
+check_cxx_source_compiles("
+  #include <xkbcommon/xkbcommon.h>
+  int main() { enum xkb_keymap_format v = XKB_KEYMAP_FORMAT_TEXT_V2; return v; }
+" HAVE_XKB_V2)
+if(NOT HAVE_XKB_V2)
+    message(STATUS "xkbcommon: XKB_KEYMAP_FORMAT_TEXT_V2 not found, enabling compat mode")
+    target_compile_definitions(hyprland_lib PRIVATE XKBCOMMON_COMPAT=1)
+    target_compile_definitions(Hyprland PRIVATE XKBCOMMON_COMPAT=1)
+endif()
 
 set(USE_GPROF OFF)
 

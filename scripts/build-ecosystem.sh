@@ -14,10 +14,9 @@ apt install -y cmake g++ pkg-config libwayland-dev wayland-protocols \
   glslang-dev glslang-tools uuid-dev liblcms2-dev libre2-dev \
   libmuparser-dev liblua5.4-dev libmagic-dev librsvg2-dev libpugixml-dev \
   libseat-dev libdisplay-info-dev libjxl-dev libheif-dev libzip-dev libtomlplusplus-dev \
-  hwdata libglvnd-dev libffi-dev meson ninja-build
+  hwdata libglvnd-dev libffi-dev
 
 LIBS=(
-  "xkbcommon,1.11.0,https://github.com/xkbcommon/libxkbcommon"
   "hyprutils,v0.13.1,https://github.com/hyprwm/hyprutils"
   "hyprgraphics,v0.5.1,https://github.com/hyprwm/hyprgraphics"
   "hyprlang,v0.6.7,https://github.com/hyprwm/hyprlang"
@@ -141,15 +140,6 @@ for fpath in glob.glob('src/**/*.cpp', recursive=True):
         f.write(new_content)
     print(f'Patched {fpath}')
 PYEOF
-  fi
-
-  # xkbcommon uses meson, not cmake
-  if [ "$name" = "xkbcommon" ]; then
-    meson setup build --prefix=/usr --buildtype=release -Denable-x11=false -Denable-docs=false
-    ninja -C build
-    ninja -C build install
-    cd "$BUILD_DIR"
-    continue
   fi
 
   cmake -B build -DCMAKE_BUILD_TYPE=Release \

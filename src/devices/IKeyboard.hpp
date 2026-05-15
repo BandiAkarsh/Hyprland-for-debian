@@ -6,6 +6,7 @@
 
 #include <optional>
 #include <xkbcommon/xkbcommon.h>
+#include "../xkbcommon-compat.hxx"
 #include <hyprutils/os/FileDescriptor.hpp>
 
 AQUAMARINE_FORWARD(IKeyboard);
