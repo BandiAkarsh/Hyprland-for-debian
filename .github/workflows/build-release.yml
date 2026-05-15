@@ -48,7 +48,7 @@ jobs:
           DESTDIR=$PWD/package cmake --install build
 
           VERSION=$(cat VERSION)
-          GIT_HASH=$(git rev-parse --short HEAD)
+          GIT_HASH=${GITHUB_SHA:0:8}
 
           cat > package/DEBIAN/control << EOF
           Package: hyprland
