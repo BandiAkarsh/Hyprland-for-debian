@@ -43,6 +43,7 @@ jobs:
           cmake --build build -j$(nproc)
 
       - name: Package as .deb
+        shell: bash
         run: |
           mkdir -p package/DEBIAN package/usr
           DESTDIR=$PWD/package cmake --install build
