@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container:
       image: debian:trixie
     steps:
@@ -86,14 +88,21 @@ jobs:
           name: hyprland-debian-stable
           path: hyprland-debian-stable.deb
 
+      - name: Compute release metadata
+        id: meta
+        run: |
+          echo "DATE_TAG=debian-stable-$(date +%Y%m%d)" >> "$GITHUB_OUTPUT"
+          echo "DATE_HUMAN=$(date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+          echo "HYPR_VERSION=v$(cat VERSION)" >> "$GITHUB_OUTPUT"
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/debian-stable'
         with:
-          tag_name: debian-stable-$(date +%Y%m%d)
-          name: Hyprland for Debian stable ($(date +%Y-%m-%d))
+          tag_name: ${{ steps.meta.outputs.DATE_TAG }}
+          name: Hyprland for Debian stable (${{ steps.meta.outputs.DATE_HUMAN }})
           body: |
-            ## Hyprland v$(cat VERSION) for Debian 13 / LMDE 7
+            ## Hyprland ${{ steps.meta.outputs.HYPR_VERSION }} for Debian 13 / LMDE 7
 
             Auto-built from upstream Hyprland + Debian compatibility patches.
 
@@ -109,7 +118,7 @@ jobs:
             ```
 
             ### What's included
-            - Full Hyprland v$(cat VERSION) with all features
+            - Full Hyprland ${{ steps.meta.outputs.HYPR_VERSION }} with all features
             - Lua config support
             - Bundled ecosystem libraries
             - Wayland protocol compatibility for Debian 13
