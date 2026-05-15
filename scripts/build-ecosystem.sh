@@ -95,12 +95,27 @@ def fix_append_range(text):
         if idx == -1:
             result.append(text[i:])
             break
-        # Find the variable name (word before '.append_range')
+        # Find the full expression before '.append_range(' (supports a.b, a->b, a[b], etc.)
         start = idx - 1
-        while start >= 0 and (text[start].isalnum() or text[start] == '_'):
-            start -= 1
+        while start >= 0 and (text[start].isalnum() or text[start] in '_>.)]'):
+            if text[start] == ')' or text[start] == ']':
+                # skip back over matching pair
+                pair = {'(': ')', '[': ']'}
+                close = text[start]
+                open_c = {v: k for k, v in pair.items()}[close]
+                depth = 1
+                start -= 1
+                while start >= 0 and depth > 0:
+                    if text[start] == close:
+                        depth += 1
+                    elif text[start] == open_c:
+                        depth -= 1
+                    start -= 1
+                start += 1  # back to the matching open char
+            else:
+                start -= 1
         var = text[start+1:idx]
-        result.append(text[i:start+1])  # whitespace before var name (not var itself)
+        result.append(text[i:start+1])  # everything before var (whitespace, etc.)
         # Find matching close paren (handling nesting)
         depth = 1
         j = idx + len('.append_range(')
